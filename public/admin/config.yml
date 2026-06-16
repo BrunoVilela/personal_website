@@ -1,0 +1,107 @@
+backend:
+  name: github
+  repo: BrunoVilela/personal_website
+  branch: main
+  auth_scope: repo
+
+local_backend: true
+publish_mode: editorial_workflow
+media_folder: public/uploads
+public_folder: /uploads
+site_url: https://brunovilela.dev
+display_url: https://brunovilela.dev
+locale: pt
+
+collections:
+  - name: pages
+    label: Páginas principais
+    files:
+      - name: home
+        label: Página inicial
+        file: content/home/index.json
+        format: json
+        fields:
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Chamada, name: eyebrow, widget: string }
+              - { label: Título, name: title, widget: string }
+              - { label: Subtítulo, name: subtitle, widget: text }
+              - { label: Imagem, name: image, widget: image, required: false }
+          - label: LinkedIn
+            name: linkedin
+            widget: object
+            fields:
+              - { label: Título, name: title, widget: string }
+              - { label: Descrição, name: description, widget: text }
+              - { label: URL, name: url, widget: string }
+      - name: about
+        label: Sobre
+        file: content/about/index.json
+        format: json
+        fields:
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Nome, name: name, widget: string }
+              - { label: Cargo, name: title, widget: string }
+              - { label: Unidade, name: unit, widget: string }
+              - { label: Instituição, name: institution, widget: string }
+              - { label: Áreas, name: areas, widget: list, field: { label: Área, name: area, widget: string } }
+              - { label: Foto, name: photo, widget: image, required: false }
+          - { label: Biografia, name: biography, widget: list, field: { label: Parágrafo, name: paragraph, widget: text } }
+          - { label: Link do CV, name: cvUrl, widget: string }
+          - { label: Link Lattes, name: lattesUrl, widget: string }
+          - { label: Prêmios, name: awards, widget: list, field: { label: Prêmio, name: award, widget: string } }
+          - label: Linha do tempo
+            name: timeline
+            widget: list
+            fields:
+              - { label: Período, name: period, widget: string }
+              - { label: Título, name: title, widget: string }
+              - { label: Descrição, name: description, widget: text }
+          - { label: Visão geral da pesquisa, name: researchOverview, widget: text }
+          - { label: Texto de colaborações, name: collaborationText, widget: text }
+          - label: Perfis
+            name: profiles
+            widget: object
+            fields:
+              - { label: Lattes, name: Lattes, widget: string }
+              - { label: ORCID, name: ORCID, widget: string }
+              - { label: Google Scholar, name: Google Scholar, widget: string }
+              - { label: ResearchGate, name: ResearchGate, widget: string }
+              - { label: GitHub, name: GitHub, widget: string }
+      - name: research
+        label: Pesquisa
+        file: content/research/index.json
+        format: json
+        fields:
+          - { label: Título, name: title, widget: string }
+          - { label: Descrição, name: description, widget: text }
+          - { label: Seções, name: sections, widget: list, required: false, fields: [{ label: Título, name: title, widget: string }, { label: Texto, name: text, widget: text }] }
+      - name: teaching
+        label: Ensino
+        file: content/teaching/index.json
+        format: json
+        fields:
+          - { label: Título, name: title, widget: string }
+          - { label: Descrição, name: description, widget: text }
+          - { label: Cursos, name: courses, widget: list, required: false, fields: [{ label: Título, name: title, widget: string }, { label: Texto, name: description, widget: text }, { label: Link, name: url, widget: string, required: false }] }
+      - name: team
+        label: Equipe
+        file: content/team/index.json
+        format: json
+        fields:
+          - { label: Título, name: title, widget: string }
+          - { label: Descrição, name: description, widget: text }
+          - { label: Membros, name: members, widget: list, required: false, fields: [{ label: Nome, name: name, widget: string }, { label: Cargo, name: role, widget: string }, { label: Projeto, name: project, widget: text, required: false }] }
+      - name: software
+        label: Software
+        file: content/software/index.json
+        format: json
+        fields:
+          - { label: Título, name: title, widget: string }
+          - { label: Descrição, name: description, widget: text }
+          - { label: Itens, name: items, widget: list, required: false, fields: [{ label: Nome, name: name, widget: string }, { label: Descrição, name: description, widget: text }, { label: GitHub, name: github, widget: string, required: false }] }

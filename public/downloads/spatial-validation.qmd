@@ -1,0 +1,6 @@
+---
+title: "Spatial validation tutorial"
+format: html
+---
+
+Use spatial blocks to estimate model transferability and reduce optimistic validation.

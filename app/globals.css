@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 202 78% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 202 78% 11%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 202 78% 11%;
+  --primary: 202 81% 16%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 144 43% 94%;
+  --secondary-foreground: 143 43% 20%;
+  --muted: 202 22% 95%;
+  --muted-foreground: 202 14% 38%;
+  --accent: 148 45% 35%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 72% 48%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 202 20% 86%;
+  --input: 202 20% 86%;
+  --ring: 148 45% 35%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 202 74% 8%;
+  --foreground: 195 30% 96%;
+  --card: 202 65% 11%;
+  --card-foreground: 195 30% 96%;
+  --popover: 202 65% 11%;
+  --popover-foreground: 195 30% 96%;
+  --primary: 195 30% 96%;
+  --primary-foreground: 202 81% 14%;
+  --secondary: 202 45% 16%;
+  --secondary-foreground: 195 30% 96%;
+  --muted: 202 45% 16%;
+  --muted-foreground: 198 18% 72%;
+  --accent: 148 38% 45%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62% 42%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 202 35% 20%;
+  --input: 202 35% 20%;
+  --ring: 148 38% 45%;
+}
+
+* {
+  @apply border-border;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+::selection {
+  background: rgba(47, 125, 79, 0.24);
+}
+
+.scientific-grid {
+  background-image:
+    linear-gradient(to right, rgba(21, 87, 123, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(21, 87, 123, 0.08) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.leaflet-container {
+  min-height: 360px;
+  width: 100%;
+  border-radius: 0.5rem;
+  z-index: 0;
+}

@@ -1,0 +1,13 @@
+{
+  "hero": {
+    "eyebrow": "Ecology | Biogeography | Data Science",
+    "title": "Bruno Vilela de Moraes e Silva",
+    "subtitle": "Professor of Ecology at the Federal University of Bahia. My research integrates biodiversity, evolution, conservation and data science to understand large-scale patterns of life and develop open tools for the scientific community.",
+    "image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=2200&q=85"
+  },
+  "linkedin": {
+    "title": "LinkedIn updates",
+    "description": "Follow news, publications, courses and academic opportunities through the professional profile. This block is prepared for a future external feed widget if configured later.",
+    "url": "https://www.linkedin.com/in/bruno-vilela/"
+  }
+}

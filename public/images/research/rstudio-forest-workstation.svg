@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Ecologia computacional em R</title>
+  <desc id="desc">Pesquisador trabalhando em computador com RStudio, código R, gráficos científicos e floresta tropical pela janela.</desc>
+  <defs>
+    <linearGradient id="wall" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#eef7f0"/><stop offset="1" stop-color="#dbeafe"/></linearGradient>
+    <linearGradient id="forest" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#14532d"/><stop offset=".5" stop-color="#22c55e"/><stop offset="1" stop-color="#0f766e"/></linearGradient>
+    <linearGradient id="screen" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#0f172a"/><stop offset="1" stop-color="#082f49"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#020617" flood-opacity=".28"/></filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#wall)"/>
+  <rect x="1050" y="80" width="420" height="530" rx="24" fill="#f8fafc" stroke="#cbd5e1" stroke-width="10"/>
+  <rect x="1080" y="112" width="360" height="468" rx="14" fill="url(#forest)"/>
+  <g opacity=".88"><path d="M1080 580 C1140 420 1190 318 1252 234 C1310 318 1376 428 1440 580 Z" fill="#064e3b"/><path d="M1080 580 C1130 470 1180 376 1240 292 C1292 386 1346 472 1440 580 Z" fill="#15803d"/><circle cx="1170" cy="184" r="56" fill="#bbf7d0" opacity=".7"/></g>
+  <ellipse cx="810" cy="885" rx="590" ry="74" fill="#0f172a" opacity=".18"/>
+  <g filter="url(#shadow)">
+    <rect x="260" y="145" width="770" height="555" rx="26" fill="#111827"/>
+    <rect x="288" y="185" width="714" height="470" rx="12" fill="url(#screen)"/>
+    <rect x="288" y="185" width="714" height="48" rx="12" fill="#1f2937"/>
+    <circle cx="322" cy="209" r="8" fill="#ef4444"/><circle cx="350" cy="209" r="8" fill="#f59e0b"/><circle cx="378" cy="209" r="8" fill="#22c55e"/>
+    <text x="430" y="217" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#e5e7eb">RStudio - biodiversity_analysis.R</text>
+    <rect x="318" y="262" width="330" height="352" rx="10" fill="#0b1220" stroke="#334155"/>
+    <rect x="678" y="262" width="292" height="168" rx="10" fill="#f8fafc"/>
+    <rect x="678" y="452" width="292" height="162" rx="10" fill="#f8fafc"/>
+    <g font-family="Menlo, Consolas, monospace" font-size="19">
+      <text x="342" y="304" fill="#93c5fd">library</text><text x="416" y="304" fill="#e5e7eb">(letsR)</text>
+      <text x="342" y="344" fill="#86efac">ranges</text><text x="420" y="344" fill="#e5e7eb"> &lt;- readRDS("species_ranges.rds")</text>
+      <text x="342" y="384" fill="#86efac">pam</text><text x="390" y="384" fill="#e5e7eb"> &lt;- lets.presab(ranges)</text>
+      <text x="342" y="424" fill="#86efac">rich</text><text x="400" y="424" fill="#e5e7eb"> &lt;- rowSums(pam)</text>
+      <text x="342" y="464" fill="#93c5fd">plot</text><text x="392" y="464" fill="#e5e7eb">(rich, col = viridis(100))</text>
+      <text x="342" y="504" fill="#fca5a5"># niche, climate, conservation</text>
+      <text x="342" y="544" fill="#86efac">model</text><text x="410" y="544" fill="#e5e7eb"> &lt;- glm(rich ~ temp + rain)</text>
+      <text x="342" y="584" fill="#93c5fd">summary</text><text x="422" y="584" fill="#e5e7eb">(model)</text>
+    </g>
+    <g transform="translate(708 292)"><rect width="232" height="108" rx="8" fill="#dbeafe"/><path d="M18 84 C54 50 89 74 122 42 S188 22 218 64" fill="none" stroke="#15803d" stroke-width="8"/><circle cx="58" cy="62" r="8" fill="#22c55e"/><circle cx="122" cy="42" r="8" fill="#f59e0b"/><circle cx="190" cy="35" r="8" fill="#ef4444"/></g>
+    <g transform="translate(710 482)"><rect width="232" height="102" rx="8" fill="#ecfeff"/><rect x="26" y="36" width="22" height="46" fill="#0ea5e9"/><rect x="66" y="18" width="22" height="64" fill="#22c55e"/><rect x="106" y="50" width="22" height="32" fill="#f59e0b"/><rect x="146" y="28" width="22" height="54" fill="#ef4444"/><rect x="186" y="44" width="22" height="38" fill="#8b5cf6"/></g>
+    <rect x="580" y="700" width="140" height="34" rx="8" fill="#334155"/><path d="M515 790 H785 L724 730 H576 Z" fill="#1f2937"/>
+  </g>
+  <g transform="translate(185 678)"><circle cx="70" cy="70" r="54" fill="#78350f"/><rect x="28" y="118" width="84" height="150" rx="40" fill="#1f2937"/><path d="M22 250 C112 210 214 215 292 260" stroke="#1f2937" stroke-width="32" stroke-linecap="round" fill="none"/></g>
+  <g transform="translate(76 90)"><rect width="430" height="122" rx="22" fill="#f8fafc" opacity=".92"/><text x="28" y="48" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#0f172a">Ecologia + R</text><text x="28" y="84" font-family="Inter, Arial, sans-serif" font-size="17" fill="#334155">dados, modelos e biodiversidade tropical</text></g>
+</svg>
