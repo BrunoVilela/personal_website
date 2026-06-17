@@ -1,18 +1,34 @@
 import { NextRequest, NextResponse } from "next/server";
 
 const GITHUB_TOKEN_URL = "https://github.com/login/oauth/access_token";
+const PROVIDER = "github";
 
-function popupResponse(message: string) {
+function popupResponse(status: "success" | "error", payload: Record<string, string>) {
+  const message = `authorization:${PROVIDER}:${status}:${JSON.stringify(payload)}`;
+
   return new NextResponse(
     `<!doctype html><html><body><script>
+      const message = ${JSON.stringify(message)};
+      const targetOrigin = window.location.origin;
+
+      try {
+        window.localStorage.setItem("decap-cms-oauth-result", message);
+      } catch (error) {}
+
       if (window.opener) {
-        window.opener.postMessage(${JSON.stringify(message)}, "*");
-        window.close();
+        window.opener.postMessage(message, targetOrigin);
+        window.setTimeout(() => window.close(), 250);
       } else {
-        document.body.textContent = "Authentication finished. You can close this window.";
+        document.body.textContent = "Authentication finished. Return to the admin window.";
       }
     </script></body></html>`,
-    { headers: { "content-type": "text/html; charset=utf-8" } }
+    {
+      headers: {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "no-store",
+        "Cross-Origin-Opener-Policy": "same-origin-allow-popups"
+      }
+    }
   );
 }
 
@@ -24,11 +40,11 @@ export async function GET(request: NextRequest) {
   const storedState = request.cookies.get("github_oauth_state")?.value;
 
   if (!clientId || !clientSecret) {
-    return popupResponse("authorization:github:error:Missing GitHub OAuth environment variables");
+    return popupResponse("error", { message: "Missing GitHub OAuth environment variables" });
   }
 
   if (!code || !state || !storedState || state !== storedState) {
-    return popupResponse("authorization:github:error:Invalid OAuth state");
+    return popupResponse("error", { message: "Invalid OAuth state" });
   }
 
   const redirectUri = new URL("/api/callback", request.url).toString();
@@ -49,11 +65,10 @@ export async function GET(request: NextRequest) {
   const tokenData = (await tokenResponse.json()) as { access_token?: string; error?: string; error_description?: string };
 
   if (!tokenResponse.ok || !tokenData.access_token) {
-    return popupResponse(`authorization:github:error:${tokenData.error_description ?? tokenData.error ?? "Token exchange failed"}`);
+    return popupResponse("error", { message: tokenData.error_description ?? tokenData.error ?? "Token exchange failed" });
   }
 
-  const message = `authorization:github:success:${JSON.stringify({ token: tokenData.access_token })}`;
-  const response = popupResponse(message);
+  const response = popupResponse("success", { token: tokenData.access_token });
   response.cookies.delete("github_oauth_state");
   return response;
 }
