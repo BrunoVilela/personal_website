@@ -260,12 +260,22 @@ function ThemeTreemapTile(props: ThemeTreemapNode & { activeTheme?: string }) {
   if (width <= 0 || height <= 0 || !name || size <= 0) return null;
   const palette = themePalette[index % themePalette.length];
   const isActive = activeTheme === name;
-  const compact = width < 95 || height < 52;
-  const label = compact && name.length > 16 ? `${name.slice(0, 14)}...` : name;
-  const fontSize = Math.max(10, Math.min(15, Math.round(Math.min(width / 8.5, height / 3.2))));
+  const innerWidth = Math.max(0, width - 24);
+  const innerHeight = Math.max(0, height - 18);
+  const fontSize = Math.max(9, Math.min(13, Math.floor(Math.min(width / 9, height / 3.8))));
+  const label = fitTreemapLabel(name, innerWidth, fontSize);
+  const clipId = `theme-tile-${normalizeText(name).replace(/\s+/g, "-")}-${index}`;
+  const labelTextLength = Math.min(innerWidth, label.length * fontSize * 0.58);
+  const showLabel = Boolean(label) && innerWidth >= 34 && innerHeight >= 22;
+  const showCount = width > 118 && height > 62;
 
   return (
     <g>
+      <defs>
+        <clipPath id={clipId}>
+          <rect x={x + 8} y={y + 8} width={Math.max(0, width - 16)} height={Math.max(0, height - 16)} rx={8} ry={8} />
+        </clipPath>
+      </defs>
       <rect
         x={x + 3}
         y={y + 3}
@@ -278,34 +288,44 @@ function ThemeTreemapTile(props: ThemeTreemapNode & { activeTheme?: string }) {
         strokeWidth={isActive ? 3 : 1.5}
         opacity={isActive ? 1 : 0.88}
       />
-      {width > 64 && height > 36 ? (
-        <>
+      {showLabel ? (
+        <g clipPath={`url(#${clipId})`} pointerEvents="none">
           <text
             x={x + 14}
-            y={y + Math.min(28, height / 2)}
+            y={y + Math.min(27, Math.max(20, height / 2))}
             fill={palette.text}
             fontSize={fontSize}
             fontFamily="var(--font-serif), Georgia, serif"
             fontWeight={700}
+            textLength={labelTextLength}
+            lengthAdjust="spacingAndGlyphs"
           >
             {label}
           </text>
-          {width > 110 && height > 62 ? (
+          {showCount ? (
             <text
               x={x + 14}
-              y={y + Math.min(50, height - 14)}
+              y={y + Math.min(48, height - 14)}
               fill={palette.text}
-              fontSize={11}
+              fontSize={10.5}
               fontFamily="var(--font-sans), system-ui, sans-serif"
               opacity={0.72}
             >
               {size} publications
             </text>
           ) : null}
-        </>
+        </g>
       ) : null}
     </g>
   );
+}
+
+function fitTreemapLabel(value: string, maxWidth: number, fontSize: number) {
+  const averageCharacterWidth = fontSize * 0.58;
+  const maxCharacters = Math.floor(maxWidth / averageCharacterWidth);
+  if (maxCharacters < 4) return "";
+  if (value.length <= maxCharacters) return value;
+  return `${value.slice(0, Math.max(1, maxCharacters - 3)).trim()}...`;
 }
 
 function MetricCard({ icon: Icon, label, value, detail }: { icon: typeof BookOpen; label: string; value: number; detail: string }) {
