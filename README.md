@@ -90,8 +90,17 @@ Para login em produção, crie um OAuth App no GitHub:
 
 1. Acesse GitHub > Settings > Developer settings > OAuth Apps.
 2. Crie um novo app com a URL do site.
-3. Configure a callback URL conforme o serviço de autenticação usado pelo Decap CMS.
-4. Adicione apenas usuários autorizados ao repositório.
+3. Use esta callback URL: `https://personal-website-one-weld-78.vercel.app/api/callback`.
+4. Copie o `Client ID` e gere um `Client Secret`.
+5. Na Vercel, em Project Settings > Environment Variables, adicione:
+
+```text
+GITHUB_CLIENT_ID=valor_do_client_id
+GITHUB_CLIENT_SECRET=valor_do_client_secret
+```
+
+6. Faça redeploy do projeto depois de salvar as variáveis.
+7. Adicione apenas usuários autorizados ao repositório.
 
 ### Proteção por senha do painel
 

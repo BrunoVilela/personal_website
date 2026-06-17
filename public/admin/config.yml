@@ -3,6 +3,8 @@ backend:
   repo: BrunoVilela/personal_website
   branch: main
   auth_scope: repo
+  base_url: https://personal-website-one-weld-78.vercel.app
+  auth_endpoint: api/auth
 
 local_backend: true
 publish_mode: editorial_workflow
