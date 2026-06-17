@@ -78,10 +78,11 @@ async function toPublication(group: OrcidGroup): Promise<Publication | null> {
   if (!summary || !title) return null;
 
   const doi = findExternalId(summary, "doi");
-  const crossref = doi ? await fetchCrossRefByDoi(doi) : null;
+  const crossref = doi ? await fetchCrossRefByDoi(doi) : await fetchCrossRefByTitle(title);
+  const resolvedDoi = doi || clean(crossref?.DOI);
   const parsedYearValue = summary["publication-date"]?.year?.value;
   const parsedYear = parsedYearValue ? Number(parsedYearValue) : undefined;
-  const fallbackYear = findLocalPublicationYear(title, doi);
+  const fallbackYear = findLocalPublicationYear(title, resolvedDoi);
   const year = resolvePublicationYear(crossref, parsedYear, fallbackYear);
   const journal = clean(crossref?.["container-title"]?.[0]) || clean(summary["journal-title"]?.value) || "ORCID-indexed publication";
   const authors = crossref?.author?.map((author) => `${author.given ?? ""} ${author.family ?? ""}`.trim()).filter(Boolean);
@@ -94,13 +95,13 @@ async function toPublication(group: OrcidGroup): Promise<Publication | null> {
     themes: inferThemes(`${title} ${journal}`),
     authors: authors?.length ? authors : ["Bruno Vilela de Moraes e Silva"],
     journal,
-    doi,
+    doi: resolvedDoi,
     citations: crossref?.["is-referenced-by-count"] ?? 0,
     abstract: "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
-    externalUrl: doi ? `https://doi.org/${doi}` : summary.url?.value,
+    externalUrl: resolvedDoi ? `https://doi.org/${resolvedDoi}` : summary.url?.value,
     scholarUrl: googleScholarArticleUrl(clean(crossref?.title?.[0]) || title),
-    source: doi ? "ORCID + CrossRef" : "ORCID",
-    citationSource: doi ? "CrossRef" : undefined
+    source: crossref ? "ORCID + CrossRef" : "ORCID",
+    citationSource: crossref ? "CrossRef" : undefined
   };
 }
 
@@ -112,6 +113,25 @@ async function fetchCrossRefByDoi(doi: string): Promise<CrossRefWork | null> {
     if (!response.ok) return null;
     const data = (await response.json()) as CrossRefResponse;
     return data.message ?? null;
+  } catch {
+    return null;
+  }
+}
+
+async function fetchCrossRefByTitle(title: string): Promise<CrossRefWork | null> {
+  try {
+    const response = await fetch(`https://api.crossref.org/works?query.title=${encodeURIComponent(title)}&rows=5`, {
+      next: { revalidate: 60 * 60 * 24 }
+    });
+    if (!response.ok) return null;
+    const data = (await response.json()) as { message?: { items?: CrossRefWork[] } };
+    const items = data.message?.items ?? [];
+    const normalizedTitle = normalize(title);
+    return (
+      items.find((item) => normalize(clean(item.title?.[0])) === normalizedTitle) ??
+      items.find((item) => normalize(clean(item.title?.[0])).includes(normalizedTitle) || normalizedTitle.includes(normalize(clean(item.title?.[0])))) ??
+      null
+    );
   } catch {
     return null;
   }
@@ -156,7 +176,46 @@ function mergePublications(primary: Publication[], fallback: Publication[]) {
 
 
 function enrichKeyPublicationThemes(items: Publication[]) {
-  const overrides: { match: string; themes: string[]; year?: number }[] = [
+  const overrides: { match: string; themes: string[]; year?: number; authors?: string[]; doi?: string; journal?: string }[] = [
+    {
+      match: "effects of polycyclic aromatic hydrocarbons on biomarker responses",
+      themes: ["Physiology", "Ecotoxicology", "Biodiversity"],
+      year: 2021,
+      doi: "10.1007/s11356-021-13952-0",
+      journal: "Environmental Science and Pollution Research",
+      authors: ["Leticia Aguilar", "Maurilio Lara-Flores", "Jaime Rendon-von Osten", "Jorge Alejandro Kurczyn Robledo", "Bruno Vilela de Moraes e Silva", "Andre Cruz"]
+    },
+    {
+      match: "invasive plants in brazil climate change effects",
+      themes: ["Climate Change", "Conservation", "Invasion Biology", "Ecological Modelling"],
+      year: 2021,
+      doi: "10.1007/s10530-021-02460-4",
+      journal: "Biological Invasions",
+      authors: ["Luiza Gabriela Fulgencio-Lima", "Andre Felipe A. Andrade", "Bruno Vilela de Moraes e Silva", "Dilermando P. Lima-Junior", "Rodrigo Antonio de Souza", "Luciano F. Sgarbi", "Juliana Simiao-Ferreira", "Paulo De Marco Jr", "Daniel P. Silva"]
+    },
+    {
+      match: "first records of chthonerpeton arii",
+      themes: ["Biodiversity", "Biogeography", "Herpetology"],
+      year: 2013,
+      doi: "10.15560/9.4.818",
+      journal: "Check List",
+      authors: ["Adriano Oliveira Maciel", "Bruno Vilela de Moraes e Silva", "Filipe Augusto Cavalcanti do Nascimento", "Diva Maria Borges-Nojosa", "Daniel Cassiano Lima"]
+    },
+    {
+      match: "new records and geographic distribution map of dendropsophus haddadi",
+      themes: ["Biodiversity", "Biogeography", "Herpetology"],
+      year: 2012,
+      doi: "10.15560/8.2.248",
+      journal: "Check List",
+      authors: ["Jose Vieira de Araujo-Neto", "Bruno Vilela de Moraes e Silva", "Jessica Yara Araujo Galdino", "Filipe Augusto Cavalcanti do Nascimento", "Barnagleison da Silva Lisboa"]
+    },
+    {
+      match: "siphlophis compressus daudin 1803",
+      themes: ["Biodiversity", "Biogeography", "Herpetology"],
+      year: 2011,
+      journal: "Cuadernos de Herpetologia",
+      authors: ["Bruno Vilela de Moraes e Silva", "Marcelo G L", "Ubiratan Goncalves", "Gabriel Omar Skuk Sugliano"]
+    },
     { match: "wallace a flexible platform", themes: ["Ecological Niche", "Biogeography", "Ecological Modelling", "Data Science"], year: 2018 },
     { match: "stacked species distribution and macroecological models", themes: ["Macroecology", "Biogeography", "Ecological Modelling", "Biodiversity"], year: 2017 },
     { match: "letsr a new r package", themes: ["Macroecology", "Data Science", "Computational Ecology"] },
@@ -177,7 +236,17 @@ function enrichKeyPublicationThemes(items: Publication[]) {
     const title = normalize(item.title);
     const override = overrides.find((entry) => title.includes(entry.match));
     if (!override) return item;
-    return { ...item, theme: override.themes[0], themes: override.themes, year: override.year ?? item.year };
+    const doi = override.doi ?? item.doi;
+    return {
+      ...item,
+      theme: override.themes[0],
+      themes: override.themes,
+      year: override.year ?? item.year,
+      authors: override.authors ?? item.authors,
+      doi,
+      journal: override.journal ?? item.journal,
+      externalUrl: doi ? `https://doi.org/${doi}` : item.externalUrl
+    };
   });
 }
 
