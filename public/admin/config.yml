@@ -8,8 +8,8 @@ local_backend: true
 publish_mode: editorial_workflow
 media_folder: public/uploads
 public_folder: /uploads
-site_url: https://brunovilela.dev
-display_url: https://brunovilela.dev
+site_url: https://personal-website-one-weld-78.vercel.app
+display_url: https://personal-website-one-weld-78.vercel.app
 locale: pt
 
 collections:
