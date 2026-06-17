@@ -79,8 +79,10 @@ async function toPublication(group: OrcidGroup): Promise<Publication | null> {
 
   const doi = findExternalId(summary, "doi");
   const crossref = doi ? await fetchCrossRefByDoi(doi) : null;
-  const parsedYear = Number(summary["publication-date"]?.year?.value);
-  const year = crossref?.issued?.["date-parts"]?.[0]?.[0] ?? (Number.isFinite(parsedYear) ? parsedYear : new Date().getFullYear());
+  const parsedYearValue = summary["publication-date"]?.year?.value;
+  const parsedYear = parsedYearValue ? Number(parsedYearValue) : undefined;
+  const fallbackYear = findLocalPublicationYear(title, doi);
+  const year = resolvePublicationYear(crossref, parsedYear, fallbackYear);
   const journal = clean(crossref?.["container-title"]?.[0]) || clean(summary["journal-title"]?.value) || "ORCID-indexed publication";
   const authors = crossref?.author?.map((author) => `${author.given ?? ""} ${author.family ?? ""}`.trim()).filter(Boolean);
 
@@ -123,6 +125,23 @@ function findExternalId(summary: OrcidWorkSummary, type: string) {
   );
 }
 
+function findLocalPublicationYear(title: string, doi?: string) {
+  const normalizedTitle = normalize(title);
+  const normalizedDoi = doi?.toLowerCase();
+  return publications.find((publication) => {
+    if (normalizedDoi && publication.doi?.toLowerCase() === normalizedDoi) return true;
+    return normalize(publication.title) === normalizedTitle;
+  })?.year;
+}
+
+function resolvePublicationYear(crossref: CrossRefWork | null, parsedYear?: number, fallbackYear?: number) {
+  const crossrefYear = crossref?.issued?.["date-parts"]?.[0]?.[0];
+  if (typeof crossrefYear === "number" && Number.isFinite(crossrefYear)) return crossrefYear;
+  if (typeof parsedYear === "number" && Number.isFinite(parsedYear)) return parsedYear;
+  if (typeof fallbackYear === "number" && Number.isFinite(fallbackYear)) return fallbackYear;
+  return 0;
+}
+
 function mergePublications(primary: Publication[], fallback: Publication[]) {
   const seen = new Set<string>();
   const merged: Publication[] = [];
@@ -138,6 +157,7 @@ function mergePublications(primary: Publication[], fallback: Publication[]) {
 
 function enrichKeyPublicationThemes(items: Publication[]) {
   const overrides: { match: string; themes: string[]; year?: number }[] = [
+    { match: "wallace a flexible platform", themes: ["Ecological Niche", "Biogeography", "Ecological Modelling", "Data Science"], year: 2018 },
     { match: "stacked species distribution and macroecological models", themes: ["Macroecology", "Biogeography", "Ecological Modelling", "Biodiversity"], year: 2017 },
     { match: "letsr a new r package", themes: ["Macroecology", "Data Science", "Computational Ecology"] },
     { match: "expowo", themes: ["Data Science", "Biodiversity", "Biogeography", "Computational Ecology"] },

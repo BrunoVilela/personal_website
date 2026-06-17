@@ -13,13 +13,19 @@ function popupResponse(status: "success" | "error", payload: Record<string, stri
 
       try {
         window.localStorage.setItem("decap-cms-oauth-result", message);
+        if (message.startsWith("authorization:github:success:")) {
+          const payload = JSON.parse(message.replace(/^authorization:github:success:/, ""));
+          if (payload.token) {
+            window.localStorage.setItem("decap-cms-user", JSON.stringify({ backendName: "github", token: payload.token }));
+          }
+        }
       } catch (error) {}
 
       if (window.opener) {
         window.opener.postMessage(message, targetOrigin);
         window.setTimeout(() => window.close(), 250);
       } else {
-        document.body.textContent = "Authentication finished. Return to the admin window.";
+        window.location.replace("/admin");
       }
     </script></body></html>`,
     {
