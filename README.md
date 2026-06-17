@@ -90,7 +90,7 @@ Para login em produção, crie um OAuth App no GitHub:
 
 1. Acesse GitHub > Settings > Developer settings > OAuth Apps.
 2. Crie um novo app com a URL do site.
-3. Use esta callback URL: `https://personal-website-one-weld-78.vercel.app/api/callback`.
+3. Use esta callback URL: `https://bvilela.com/api/callback`.
 4. Copie o `Client ID` e gere um `Client Secret`.
 5. Na Vercel, em Project Settings > Environment Variables, adicione:
 

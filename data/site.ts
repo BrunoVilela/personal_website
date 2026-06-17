@@ -4,7 +4,7 @@ export const siteConfig = {
   institution: "Institute of Biology, Federal University of Bahia (UFBA)",
   description:
     "Academic website of Bruno Vilela de Moraes e Silva, Professor of Ecology, working across biogeography, macroecology, conservation and data science.",
-  url: "https://personal-website-one-weld-78.vercel.app",
+  url: "https://bvilela.com",
   locale: "en_US",
   email: "bruno.vilela@ufba.br",
   address: "Institute of Biology, UFBA, Rua Barao de Jeremoabo, Salvador, BA, Brazil",
