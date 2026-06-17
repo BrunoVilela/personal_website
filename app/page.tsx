@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { FadeIn } from "@/components/animated";
 import { SectionHeading } from "@/components/section-heading";
-import { researchAreas, siteConfig } from "@/data/site";
+import { siteConfig } from "@/data/site";
+import { researchThemes } from "@/data/research";
 import { software } from "@/data/software";
 import { getSyncedPublications } from "@/lib/orcid-publications";
 import { getHomeContent } from "@/lib/content";
@@ -59,17 +60,32 @@ export default async function HomePage() {
       </section>
 
       <section className="border-y bg-muted/45 py-16">
-        <div className="container grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+        <div className="container grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
           <SectionHeading
             eyebrow="Research Program"
-            title="Broad ecological questions, rigorous quantitative methods."
-            description="The group combines ecological theory, large biodiversity databases, spatial modelling and open software to study biodiversity from local to global scales."
+            title="Big questions about biodiversity across space, time and culture."
+            description="Six connected research lines organize the lab's work on biodiversity, evolution, climate change, conservation, cultural systems and open quantitative methods."
           />
-          <div className="grid gap-3 sm:grid-cols-2">
-            {researchAreas.map((area) => (
-              <div key={area} className="rounded-lg border bg-background p-4 text-sm font-medium">
-                {area}
-              </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {researchThemes.map((theme, index) => (
+              <Link
+                key={theme.slug}
+                href={`/pesquisa#${theme.slug}`}
+                className="group relative overflow-hidden rounded-lg border bg-background p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-accent/45 hover:shadow-soft"
+              >
+                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-forest-600 via-accent to-ocean-700 opacity-75" />
+                <div className="flex items-start justify-between gap-4">
+                  <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-accent/10 text-sm font-semibold text-accent">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <ArrowRight className="mt-1 size-4 text-muted-foreground transition group-hover:translate-x-1 group-hover:text-accent" />
+                </div>
+                <h3 className="mt-4 font-serif text-xl font-bold leading-tight">{theme.title}</h3>
+                <p className="mt-3 line-clamp-3 text-sm leading-6 text-muted-foreground">{theme.summary}</p>
+                <span className="mt-4 inline-flex text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+                  Explore research line
+                </span>
+              </Link>
             ))}
           </div>
         </div>

@@ -137,7 +137,8 @@ function mergePublications(primary: Publication[], fallback: Publication[]) {
 
 
 function enrichKeyPublicationThemes(items: Publication[]) {
-  const overrides = [
+  const overrides: { match: string; themes: string[]; year?: number }[] = [
+    { match: "stacked species distribution and macroecological models", themes: ["Macroecology", "Biogeography", "Ecological Modelling", "Biodiversity"], year: 2017 },
     { match: "letsr a new r package", themes: ["Macroecology", "Data Science", "Computational Ecology"] },
     { match: "expowo", themes: ["Data Science", "Biodiversity", "Biogeography", "Computational Ecology"] },
     { match: "clade replacement theory", themes: ["Macroevolution", "Evolution", "Biodiversity"] },
@@ -156,7 +157,7 @@ function enrichKeyPublicationThemes(items: Publication[]) {
     const title = normalize(item.title);
     const override = overrides.find((entry) => title.includes(entry.match));
     if (!override) return item;
-    return { ...item, theme: override.themes[0], themes: override.themes };
+    return { ...item, theme: override.themes[0], themes: override.themes, year: override.year ?? item.year };
   });
 }
 

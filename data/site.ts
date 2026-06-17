@@ -16,7 +16,7 @@ export const siteConfig = {
   linkedin: "https://www.linkedin.com/in/bruno-vilela/",
   instagram: "https://www.instagram.com/brunovilelaeco/",
   youtube: "https://www.youtube.com/@BrunoVilelaEco",
-  researchId: "https://www.researchgate.net/profile/Bruno-Vilela-2",
+  researchId: "https://www.webofscience.com/wos/author/record/L-1594-2015",
   cv: "/downloads/bruno-vilela-cv-english.pdf"
 };
 
