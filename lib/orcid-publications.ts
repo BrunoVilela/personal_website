@@ -270,6 +270,14 @@ function enrichKeyPublicationThemes(items: Publication[]) {
       authors: ["Emerson Campos Barbosa Junior", "Vitor Passos Rios", "Pavel Dodonov", "Bruno Vilela", "Hilton F. Japyassu"]
     },
     {
+      match: "patterns of energetic substrate modifications in response to feeding in boas",
+      themes: ["Physiology", "Functional Ecology", "Evolution"],
+      year: 2022,
+      doi: "10.1016/j.cbpa.2021.111073",
+      journal: "Comparative Biochemistry and Physiology Part A: Molecular & Integrative Physiology",
+      authors: ["Helena Rachel da Mota Araujo", "Jose Eduardo de Carvalho", "Wilfried Klein", "Bruno Vilela", "Andre Luis da Cruz"]
+    },
+    {
       match: "reproductive notes and larval development of macrogenioglottus alipioi",
       themes: ["Biodiversity", "Herpetology", "Natural History"],
       year: 2022,
