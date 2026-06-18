@@ -94,15 +94,13 @@ export const software: SoftwareItem[] = [
     ]
   },
   {
-    name: "LCVP",
-    language: "R/Data",
+    name: "lcvplants",
+    language: "R",
     role: "Collaboration",
-    description: "Data package with the Leipzig Catalogue of Vascular Plants, used to access and export a global taxonomic list of vascular plants.",
-    github: "https://github.com/idiv-biodiversity/LCVP",
-    docs: "https://github.com/idiv-biodiversity/LCVP#readme",
-    examples: ["Taxonomic catalogue", "Vascular plant data", "Integration with lcvplants"],
-    metrics: [
-      { label: "GitHub stars", value: "17" }
-    ]
+    description: "R package for taxonomic name resolution and harmonization using the Leipzig Catalogue of Vascular Plants, supporting large-scale plant biodiversity workflows.",
+    github: "https://github.com/idiv-biodiversity/lcvplants",
+    docs: "https://idiv-biodiversity.github.io/lcvplants/articles/taxonomic_resolution_using_lcplants.html",
+    examples: ["Taxonomic name resolution", "Vascular plant names", "Large-scale biodiversity workflows", "Taxonomic harmonization"],
+    metrics: []
   }
 ];

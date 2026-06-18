@@ -4,19 +4,20 @@ import { SectionHeading } from "@/components/section-heading";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { supervision } from "@/data/supervision";
+import { getTeamContent } from "@/lib/content";
 
 export const metadata: Metadata = { title: "Team" };
 
 export default function EquipePage() {
-  const current = supervision.filter((item) => item.status === "Em andamento");
-  const completed = supervision.filter((item) => item.status === "Concluída");
+  const content = getTeamContent();
+  const current = content.members.filter((item) => item.status === "Em andamento");
+  const completed = content.members.filter((item) => item.status === "Concluída");
 
   return (
     <div className="container py-12">
       <section>
         <SectionHeading
-          title="Current Team"
+          title={content.title}
         />
         <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {current.map((item) => (
@@ -27,8 +28,8 @@ export default function EquipePage() {
 
       <section className="mt-14">
         <SectionHeading
-          title="Alumni"
-          description="Former PhD, MSc, undergraduate research and thesis supervisees."
+          title={content.alumniTitle}
+          description={content.alumniDescription}
         />
         <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {completed.map((item) => (
@@ -41,11 +42,11 @@ export default function EquipePage() {
   );
 }
 
-function supervisionKey(item: (typeof supervision)[number]) {
+function supervisionKey(item: ReturnType<typeof getTeamContent>["members"][number]) {
   return `${item.student}-${item.title}-${item.level}-${item.status}-${item.year}`;
 }
 
-function TeamCard({ item }: { item: (typeof supervision)[number] }) {
+function TeamCard({ item }: { item: ReturnType<typeof getTeamContent>["members"][number] }) {
   const levelLabel = formatLevel(item.level);
   const statusLabel = item.status === "Em andamento" ? "Ongoing" : "Completed";
   const orientationLabel = item.orientation ? formatOrientation(item.orientation) : null;
@@ -90,7 +91,7 @@ function TeamCard({ item }: { item: (typeof supervision)[number] }) {
   );
 }
 
-function formatLevel(level: (typeof supervision)[number]["level"]) {
+function formatLevel(level: ReturnType<typeof getTeamContent>["members"][number]["level"]) {
   const labels = {
     Doutorado: "PhD",
     Mestrado: "MSc",
@@ -100,7 +101,7 @@ function formatLevel(level: (typeof supervision)[number]["level"]) {
   return labels[level];
 }
 
-function formatOrientation(orientation: NonNullable<(typeof supervision)[number]["orientation"]>) {
+function formatOrientation(orientation: NonNullable<ReturnType<typeof getTeamContent>["members"][number]["orientation"]>) {
   const labels = {
     "Orientação principal": "Main supervision",
     Coorientação: "Co-supervision",

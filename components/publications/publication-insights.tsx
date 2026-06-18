@@ -7,13 +7,14 @@ import { ResponsiveContainer, Tooltip, Treemap } from "recharts";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { cn, formatNumber } from "@/lib/utils";
-import { scholarMetrics } from "@/data/site";
 import type { Publication } from "@/data/publications";
+import type { MetricsContent } from "@/lib/content";
 
 type Props = {
   publications: Publication[];
   activeQuery?: string;
   activeTheme?: string;
+  metrics: MetricsContent;
   onWordSelect?: (word: string) => void;
   onThemeSelect?: (theme: string) => void;
 };
@@ -45,7 +46,7 @@ type ThemeTreemapNode = {
   index?: number;
 };
 
-export function PublicationInsights({ publications, activeQuery = "", activeTheme = "All", onWordSelect, onThemeSelect }: Props) {
+export function PublicationInsights({ publications, activeQuery = "", activeTheme = "All", metrics, onWordSelect, onThemeSelect }: Props) {
   const [activeHighlight, setActiveHighlight] = useState(0);
   const totalArticles = publications.filter((publication) => publication.type === "Article").length;
   const journals = Array.from(new Set(publications.map((publication) => publication.journal).filter(Boolean))).sort();
@@ -86,8 +87,8 @@ export function PublicationInsights({ publications, activeQuery = "", activeThem
     <section className="grid gap-6">
       <div className="grid gap-4 md:grid-cols-4">
         <MetricCard icon={BookOpen} label="Articles" value={totalArticles} detail="peer-reviewed publications" />
-        <MetricCard icon={Quote} label="Citations" value={scholarMetrics.citations} detail="total from Google Scholar" />
-        <MetricCard icon={TrendingUp} label="H-index" value={scholarMetrics.hIndex} detail="h-index reported by Google Scholar" />
+        <MetricCard icon={Quote} label="Citations" value={metrics.citations} detail={`total from ${metrics.source}`} />
+        <MetricCard icon={TrendingUp} label="H-index" value={metrics.hIndex} detail={`h-index reported by ${metrics.source}`} />
         <MetricCard icon={Newspaper} label="Journals" value={journals.length} detail="distinct scientific journals" />
       </div>
 

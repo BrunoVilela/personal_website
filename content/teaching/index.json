@@ -1,5 +1,102 @@
 {
-  "title": "Teaching and Student Training",
-  "description": "Atividades de ensino universitário e cursos online abertos.",
-  "courses": []
+  "hero": {
+    "eyebrow": "Teaching",
+    "title": "Teaching and Student Training",
+    "description": "I teach undergraduate and graduate students in ecology, biodiversity, scientific programming and data science, while also making open educational materials available to the scientific community.",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=85"
+  },
+  "university": {
+    "eyebrow": "University Teaching",
+    "title": "Courses Taught",
+    "description": "At the Federal University of Bahia, I have taught undergraduate and graduate courses in ecology, biostatistics, scientific programming and geographic information systems.",
+    "areas": [
+      {
+        "title": "Ecology",
+        "description": "Courses focused on the ecological processes that structure populations, communities and ecosystems.",
+        "examples": [
+          "Population Ecology",
+          "Community Ecology",
+          "Ecology and Society"
+        ]
+      },
+      {
+        "title": "Biostatistics",
+        "description": "Statistical methods applied to biological, ecological and evolutionary data.",
+        "examples": [
+          "Biostatistics",
+          "Introduction to Research Methods in Ecology and Applications"
+        ]
+      },
+      {
+        "title": "Scientific Programming",
+        "description": "Training in programming and data analysis using modern tools for scientific research.",
+        "examples": [
+          "R programming applied to biodiversity studies"
+        ]
+      },
+      {
+        "title": "Geographic Information Systems (GIS)",
+        "description": "Geospatial methods applied to ecology, conservation and biogeography.",
+        "examples": [
+          "GIS applied to Ecology"
+        ]
+      }
+    ]
+  },
+  "online": {
+    "eyebrow": "Online Courses",
+    "title": "Open Courses and Educational Content",
+    "description": "Beyond university teaching, I maintain a YouTube channel with courses, tutorials and materials for students, researchers and professionals interested in ecology, biodiversity and data science.",
+    "channel": {
+      "url": "https://www.youtube.com/@BrunoVilelaEco",
+      "handle": "@BrunoVilelaEco",
+      "description": "Channel with courses, lectures and tutorials on ecology, biodiversity, R programming, biostatistics, GIS and data science applied to ecological research."
+    },
+    "courses": [
+      {
+        "title": "R Programming for Ecology and Biodiversity",
+        "level": "Open course",
+        "description": "Learn to use R for manipulation, visualization and analysis of ecological, biogeographic and evolutionary data. The course covers basic programming concepts through scientific research applications.",
+        "image": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=85",
+        "url": "https://youtu.be/KZjRSaH0oTA?si=pEZqNak-ZUoAhNA1",
+        "topics": [
+          "R",
+          "ecology",
+          "biodiversity",
+          "data science"
+        ]
+      },
+      {
+        "title": "Geographic Information Systems (GIS) for Biodiversity and Conservation",
+        "level": "Open course",
+        "description": "Course focused on geospatial tools in ecology, biogeography and conservation. Topics include spatial data handling, map production, species distribution modelling, geographic analyses and applications in biodiversity planning and conservation.",
+        "image": "https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=900&q=85",
+        "url": "https://youtu.be/sFMKgSRStD0?si=Z1UF2JnMeGLEdV_U",
+        "topics": [
+          "GIS",
+          "biogeography",
+          "conservation",
+          "maps"
+        ]
+      },
+      {
+        "title": "Population and Community Ecology",
+        "level": "Open course",
+        "description": "Lecture series dedicated to practical analyses in population and community ecology, including population growth models, community structure and biological diversity.",
+        "image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=85",
+        "url": "https://youtu.be/1kG85lurxw0?si=1C5j0GDanxgUMX3L",
+        "topics": [
+          "populations",
+          "communities",
+          "diversity",
+          "ecology"
+        ]
+      }
+    ]
+  },
+  "openTeaching": {
+    "eyebrow": "Open Teaching",
+    "title": "Open Knowledge",
+    "description": "Scientific training should extend beyond the classroom. For this reason, a substantial part of the material produced for my courses is made freely available through courses, videos and online resources, expanding access to knowledge for students and researchers across institutions and countries."
+  }
 }

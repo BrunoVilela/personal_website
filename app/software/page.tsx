@@ -4,16 +4,17 @@ import { SectionHeading } from "@/components/section-heading";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { software } from "@/data/software";
+import { getSoftwareContent } from "@/lib/content";
 
 export const metadata: Metadata = { title: "Software" };
 
 export default function SoftwarePage() {
+  const content = getSoftwareContent();
   return (
     <div className="container py-12">
-      <SectionHeading eyebrow="Software" title="Open Scientific Tools" description="I develop and collaborate on open tools for biodiversity, macroecology, biogeography, phylogenetics and data science, mainly in R. Below is a selection of the main available packages and applications." />
+      <SectionHeading eyebrow={content.intro.eyebrow} title={content.intro.title} description={content.intro.description} />
       <div className="mt-10 grid gap-6 md:grid-cols-2">
-        {software.map((item) => (
+        {content.items.map((item) => (
           <Card key={item.name}>
             <CardContent className="p-6">
               <div className="flex items-start justify-between gap-4">

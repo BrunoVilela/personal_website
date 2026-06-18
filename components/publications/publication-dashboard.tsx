@@ -4,12 +4,14 @@ import { useState } from "react";
 import { PublicationExplorer, type PublicationFilters } from "@/components/publications/publication-explorer";
 import { PublicationInsights } from "@/components/publications/publication-insights";
 import type { Publication } from "@/data/publications";
+import type { MetricsContent } from "@/lib/content";
 
 type Props = {
   publications: Publication[];
+  metrics: MetricsContent;
 };
 
-export function PublicationDashboard({ publications }: Props) {
+export function PublicationDashboard({ publications, metrics }: Props) {
   const [filters, setFilters] = useState<PublicationFilters>({
     query: "",
     year: "All",
@@ -41,6 +43,7 @@ export function PublicationDashboard({ publications }: Props) {
     <div className="grid gap-10">
       <PublicationInsights
         publications={publications}
+        metrics={metrics}
         activeQuery={filters.query}
         activeTheme={filters.theme}
         onWordSelect={applyWordFilter}

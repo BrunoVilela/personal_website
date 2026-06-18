@@ -39,8 +39,8 @@ const themeQuestions: Record<string, string[]> = {
     "How can extinction risks be reduced?"
   ],
   "evolucao-cultural": [
-    "How are cultures distributed across the planet?",
-    "Which factors influence linguistic diversity?",
+    "How do cultures evolve?",
+    "Which factors influence cultural diversity?",
     "Are there similar patterns in biological and cultural diversity?",
     "How do environmental changes affect cultural systems?"
   ],

@@ -1,4 +1,5 @@
-import { publications, type Publication } from "@/data/publications";
+import type { Publication } from "@/data/publications";
+import { getPublicationsContent } from "@/lib/content";
 
 const ORCID_ID = "0000-0003-4072-0558";
 const ORCID_API = `https://pub.orcid.org/v3.0/${ORCID_ID}/works`;
@@ -46,6 +47,7 @@ type CrossRefWork = {
 type CrossRefResponse = { message?: CrossRefWork };
 
 export async function getSyncedPublications(): Promise<PublicationSync> {
+  const localPublications = getPublicationsContent().publications;
   try {
     const response = await fetch(ORCID_API, {
       headers: { Accept: "application/json" },
@@ -57,9 +59,9 @@ export async function getSyncedPublications(): Promise<PublicationSync> {
     }
 
     const data = (await response.json()) as OrcidWorksResponse;
-    const orcidWorks = await Promise.all((data.group ?? []).map(toPublication));
+    const orcidWorks = await Promise.all((data.group ?? []).map((group) => toPublication(group, localPublications)));
     const validWorks = orcidWorks.filter((item): item is Publication => Boolean(item));
-    const merged = mergePublications(validWorks, publications);
+    const merged = mergePublications(validWorks, localPublications);
 
     return {
       publications: merged,
@@ -68,7 +70,7 @@ export async function getSyncedPublications(): Promise<PublicationSync> {
     };
   } catch (error) {
     return {
-      publications,
+      publications: localPublications,
       source: "local",
       updatedAt: new Date().toISOString(),
       error: error instanceof Error ? error.message : "Failed to synchronize ORCID"
@@ -76,7 +78,7 @@ export async function getSyncedPublications(): Promise<PublicationSync> {
   }
 }
 
-async function toPublication(group: OrcidGroup): Promise<Publication | null> {
+async function toPublication(group: OrcidGroup, localPublications: Publication[]): Promise<Publication | null> {
   const summary = group["work-summary"]?.[0];
   const title = clean(summary?.title?.title?.value);
   if (!summary || !title) return null;
@@ -86,7 +88,7 @@ async function toPublication(group: OrcidGroup): Promise<Publication | null> {
   const resolvedDoi = doi || clean(crossref?.DOI);
   const parsedYearValue = summary["publication-date"]?.year?.value;
   const parsedYear = parsedYearValue ? Number(parsedYearValue) : undefined;
-  const localPublication = findLocalPublication(title, resolvedDoi);
+  const localPublication = findLocalPublication(localPublications, title, resolvedDoi);
   const year = resolvePublicationYear(crossref, parsedYear, localPublication?.year);
   const journal =
     clean(crossref?.["container-title"]?.[0]) ||
@@ -158,10 +160,10 @@ function findExternalId(summary: OrcidWorkSummary, type: string) {
   );
 }
 
-function findLocalPublication(title: string, doi?: string) {
+function findLocalPublication(localPublications: Publication[], title: string, doi?: string) {
   const normalizedTitle = normalize(title);
   const normalizedDoi = doi?.toLowerCase();
-  return publications.find((publication) => {
+  return localPublications.find((publication) => {
     if (normalizedDoi && publication.doi?.toLowerCase() === normalizedDoi) return true;
     const localTitle = normalize(publication.title);
     return localTitle === normalizedTitle || localTitle.includes(normalizedTitle) || normalizedTitle.includes(localTitle);
@@ -190,7 +192,7 @@ function mergePublications(primary: Publication[], fallback: Publication[]) {
     }
     merged[existingIndex] = mergePublicationMetadata(merged[existingIndex], normalizedItem);
   }
-  return enrichKeyPublicationThemes(merged).sort((a, b) => b.year - a.year || a.title.localeCompare(b.title));
+  return dedupePublications(enrichKeyPublicationThemes(merged)).sort((a, b) => b.year - a.year || a.title.localeCompare(b.title));
 }
 
 function mergePublicationMetadata(primary: Publication, fallback: Publication): Publication {
@@ -211,6 +213,22 @@ function mergePublicationMetadata(primary: Publication, fallback: Publication): 
   };
 }
 
+function dedupePublications(items: Publication[]) {
+  const indexByKey = new Map<string, number>();
+  const deduped: Publication[] = [];
+  for (const item of items) {
+    const key = item.doi ? `doi:${item.doi.toLowerCase()}` : `title:${normalize(item.title)}`;
+    const existingIndex = indexByKey.get(key);
+    if (existingIndex === undefined) {
+      indexByKey.set(key, deduped.length);
+      deduped.push(item);
+      continue;
+    }
+    deduped[existingIndex] = mergePublicationMetadata(deduped[existingIndex], item);
+  }
+  return deduped;
+}
+
 
 function enrichKeyPublicationThemes(items: Publication[]) {
   const overrides: { match: string; themes: string[]; year?: number; authors?: string[]; doi?: string; journal?: string }[] = [
@@ -218,9 +236,9 @@ function enrichKeyPublicationThemes(items: Publication[]) {
       match: "effects of polycyclic aromatic hydrocarbons on biomarker responses",
       themes: ["Physiology", "Ecotoxicology", "Biodiversity"],
       year: 2021,
-      doi: "10.1007/s11356-021-13952-0",
-      journal: "Environmental Science and Pollution Research",
-      authors: ["Leticia Aguilar", "Maurilio Lara-Flores", "Jaime Rendon-von Osten", "Jorge Alejandro Kurczyn Robledo", "Bruno Vilela de Moraes e Silva", "Andre Cruz"]
+      doi: "10.1080/10406638.2020.1755322",
+      journal: "Polycyclic Aromatic Compounds",
+      authors: ["Leticia Aguilar", "Maurilio Lara-Flores", "Jaime Rendon-von Osten", "Jorge Alejandro Kurczyn Robledo", "Bruno Vilela", "Andre Cruz"]
     },
     {
       match: "invasive plants in brazil climate change effects",

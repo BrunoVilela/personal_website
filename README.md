@@ -29,7 +29,7 @@ npm run build
 
 ## Conteúdo e dados
 
-Os dados mockados estão em `data/`:
+Os dados base originais continuam em `data/`, mas as áreas principais editáveis pelo painel usam arquivos JSON em `content/`.
 
 - `site.ts`: identidade, navegação, métricas e links acadêmicos.
 - `research.ts`: temas de pesquisa.
@@ -61,9 +61,12 @@ No painel `/admin`, as principais áreas editáveis são:
 - Página inicial: título, subtítulo, imagem principal e bloco do LinkedIn.
 - Sobre: foto, biografia, linha do tempo, prêmios, links de perfis e texto de colaborações.
 - Pesquisa: estrutura preparada para textos e seções narrativas.
-- Ensino: estrutura preparada para disciplinas e cursos.
-- Equipe: estrutura preparada para membros e projetos.
-- Software: estrutura preparada para descrição de ferramentas.
+- Ensino: hero, disciplinas/áreas de ensino universitário, cursos online, links do YouTube, imagens e tags.
+- Equipe e alunos: orientandos atuais, alumni, nível, status, projeto, programa, Lattes, ORCID, Scholar, tese/dissertação/TCC e foto.
+- Software: descrição das ferramentas, linguagem, papel no projeto, links, exemplos e métricas.
+- Contato: e-mail, endereço, texto da página, mapa e textos do formulário.
+- Citações e indicadores: citações, fator H, índice i10 e métricas desde 2021.
+- Pesquisa - publicações: texto da página de publicações e lista local/editável de publicações. Esta lista complementa a sincronização ORCID/CrossRef e permite adicionar publicações manualmente.
 
 Os arquivos ficam em:
 
@@ -74,7 +77,21 @@ content/research/index.json
 content/teaching/index.json
 content/team/index.json
 content/software/index.json
+content/contact/index.json
+content/metrics/index.json
+content/publications/index.json
 ```
+
+### Como editar publicações
+
+1. Acesse `/admin`.
+2. Abra `Páginas principais` > `Pesquisa - publicações`.
+3. Edite uma publicação existente ou adicione um novo item em `Publicações locais/editáveis`.
+4. Preencha pelo menos título, ano, tipo, autores, revista, tema principal e resumo.
+5. Use DOI sem o prefixo `https://doi.org/` quando possível, por exemplo `10.1111/mec.17510`.
+6. Publique a alteração. A Vercel fará o deploy automaticamente.
+
+A sincronização ORCID/CrossRef ainda roda na página pública. Quando um registro editado localmente tiver o mesmo DOI de um registro ORCID, o site mescla os metadados e usa a cópia local como fallback confiável para autores, ano, revista e temas.
 
 ### Configurar GitHub no Decap CMS
 

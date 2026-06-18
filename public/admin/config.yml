@@ -65,16 +65,16 @@ collections:
               - { label: Título, name: title, widget: string }
               - { label: Descrição, name: description, widget: text }
           - { label: Visão geral da pesquisa, name: researchOverview, widget: text }
-          - { label: Texto de colaborações, name: collaborationText, widget: text }
+          - { label: Texto de colaborações, name: collaborationText, widget: text, required: false }
           - label: Perfis
             name: profiles
             widget: object
             fields:
-              - { label: Lattes, name: Lattes, widget: string }
-              - { label: ORCID, name: ORCID, widget: string }
-              - { label: Google Scholar, name: Google Scholar, widget: string }
-              - { label: ResearchGate, name: ResearchGate, widget: string }
-              - { label: GitHub, name: GitHub, widget: string }
+              - { label: Lattes, name: Lattes, widget: string, required: false }
+              - { label: ORCID, name: ORCID, widget: string, required: false }
+              - { label: Google Scholar, name: Google Scholar, widget: string, required: false }
+              - { label: ResearchGate, name: ResearchGate, widget: string, required: false }
+              - { label: GitHub, name: GitHub, widget: string, required: false }
       - name: research
         label: Pesquisa
         file: content/research/index.json
@@ -82,28 +82,210 @@ collections:
         fields:
           - { label: Título, name: title, widget: string }
           - { label: Descrição, name: description, widget: text }
-          - { label: Seções, name: sections, widget: list, required: false, fields: [{ label: Título, name: title, widget: string }, { label: Texto, name: text, widget: text }] }
+          - label: Seções
+            name: sections
+            widget: list
+            required: false
+            fields:
+              - { label: Título, name: title, widget: string }
+              - { label: Texto, name: text, widget: text }
       - name: teaching
         label: Ensino
         file: content/teaching/index.json
         format: json
         fields:
-          - { label: Título, name: title, widget: string }
-          - { label: Descrição, name: description, widget: text }
-          - { label: Cursos, name: courses, widget: list, required: false, fields: [{ label: Título, name: title, widget: string }, { label: Texto, name: description, widget: text }, { label: Link, name: url, widget: string, required: false }] }
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Chamada, name: eyebrow, widget: string }
+              - { label: Título, name: title, widget: string }
+              - { label: Descrição, name: description, widget: text }
+              - { label: Imagem, name: image, widget: image, required: false }
+          - label: Ensino universitário
+            name: university
+            widget: object
+            fields:
+              - { label: Chamada, name: eyebrow, widget: string }
+              - { label: Título, name: title, widget: string }
+              - { label: Descrição, name: description, widget: text }
+              - label: Áreas/disciplinas
+                name: areas
+                widget: list
+                fields:
+                  - { label: Título, name: title, widget: string }
+                  - { label: Descrição, name: description, widget: text }
+                  - { label: Exemplos, name: examples, widget: list, field: { label: Exemplo, name: example, widget: string } }
+          - label: Cursos online
+            name: online
+            widget: object
+            fields:
+              - { label: Chamada, name: eyebrow, widget: string }
+              - { label: Título, name: title, widget: string }
+              - { label: Descrição, name: description, widget: text }
+              - label: Canal
+                name: channel
+                widget: object
+                fields:
+                  - { label: URL, name: url, widget: string }
+                  - { label: Handle, name: handle, widget: string }
+                  - { label: Descrição, name: description, widget: text }
+              - label: Cursos
+                name: courses
+                widget: list
+                fields:
+                  - { label: Título, name: title, widget: string }
+                  - { label: Nível/tag, name: level, widget: string }
+                  - { label: Descrição, name: description, widget: text }
+                  - { label: Imagem, name: image, widget: image, required: false }
+                  - { label: URL, name: url, widget: string }
+                  - { label: Tópicos, name: topics, widget: list, field: { label: Tópico, name: topic, widget: string } }
+          - label: Ensino aberto
+            name: openTeaching
+            widget: object
+            fields:
+              - { label: Chamada, name: eyebrow, widget: string }
+              - { label: Título, name: title, widget: string }
+              - { label: Descrição, name: description, widget: text }
       - name: team
-        label: Equipe
+        label: Equipe e alunos
         file: content/team/index.json
         format: json
         fields:
-          - { label: Título, name: title, widget: string }
-          - { label: Descrição, name: description, widget: text }
-          - { label: Membros, name: members, widget: list, required: false, fields: [{ label: Nome, name: name, widget: string }, { label: Cargo, name: role, widget: string }, { label: Projeto, name: project, widget: text, required: false }] }
+          - { label: Título da equipe atual, name: title, widget: string }
+          - { label: Título de alumni, name: alumniTitle, widget: string }
+          - { label: Descrição de alumni, name: alumniDescription, widget: text }
+          - label: Membros/orientações
+            name: members
+            widget: list
+            fields:
+              - { label: Nome, name: student, widget: string }
+              - { label: Projeto/título, name: title, widget: text }
+              - label: Nível
+                name: level
+                widget: select
+                options: [Doutorado, Mestrado, Iniciação Científica, TCC]
+              - label: Status
+                name: status
+                widget: select
+                options: [Em andamento, Concluída]
+              - { label: Ano, name: year, widget: number, value_type: int }
+              - { label: Instituição, name: institution, widget: string }
+              - { label: Programa/curso, name: program, widget: string }
+              - label: Tipo de orientação
+                name: orientation
+                widget: select
+                required: false
+                options: [Orientação principal, Coorientação, Orientação]
+              - { label: Financiamento, name: funding, widget: string, required: false }
+              - { label: Lattes, name: lattes, widget: string, required: false }
+              - { label: Scholar, name: scholar, widget: string, required: false }
+              - { label: ORCID, name: orcid, widget: string, required: false }
+              - { label: Link tese/dissertação/TCC, name: thesisUrl, widget: string, required: false }
+              - { label: Foto, name: photo, widget: image, required: false }
+              - { label: Emoji, name: emoji, widget: string, required: false }
       - name: software
         label: Software
         file: content/software/index.json
         format: json
         fields:
-          - { label: Título, name: title, widget: string }
-          - { label: Descrição, name: description, widget: text }
-          - { label: Itens, name: items, widget: list, required: false, fields: [{ label: Nome, name: name, widget: string }, { label: Descrição, name: description, widget: text }, { label: GitHub, name: github, widget: string, required: false }] }
+          - label: Introdução
+            name: intro
+            widget: object
+            fields:
+              - { label: Chamada, name: eyebrow, widget: string }
+              - { label: Título, name: title, widget: string }
+              - { label: Descrição, name: description, widget: text }
+          - label: Pacotes e ferramentas
+            name: items
+            widget: list
+            fields:
+              - { label: Nome, name: name, widget: string }
+              - { label: Linguagem, name: language, widget: string }
+              - label: Papel
+                name: role
+                widget: select
+                options: [Development, Collaboration]
+              - { label: Descrição, name: description, widget: text }
+              - { label: GitHub, name: github, widget: string, required: false }
+              - { label: Documentação, name: docs, widget: string, required: false }
+              - { label: Exemplos, name: examples, widget: list, required: false, field: { label: Exemplo, name: example, widget: string } }
+              - label: Métricas
+                name: metrics
+                widget: list
+                required: false
+                fields:
+                  - { label: Rótulo, name: label, widget: string }
+                  - { label: Valor, name: value, widget: string }
+      - name: contact
+        label: Contato
+        file: content/contact/index.json
+        format: json
+        fields:
+          - label: Introdução
+            name: intro
+            widget: object
+            fields:
+              - { label: Chamada, name: eyebrow, widget: string }
+              - { label: Título, name: title, widget: string }
+              - { label: Descrição, name: description, widget: text }
+          - { label: E-mail, name: email, widget: string }
+          - { label: Endereço, name: address, widget: text }
+          - { label: Busca no Google Maps, name: mapQuery, widget: string }
+          - label: Formulário
+            name: form
+            widget: object
+            fields:
+              - { label: Placeholder nome, name: namePlaceholder, widget: string }
+              - { label: Placeholder e-mail, name: emailPlaceholder, widget: string }
+              - { label: Placeholder instituição, name: institutionPlaceholder, widget: string }
+              - { label: Placeholder mensagem, name: messagePlaceholder, widget: string }
+              - { label: Botão, name: buttonLabel, widget: string }
+      - name: metrics
+        label: Citações e indicadores
+        file: content/metrics/index.json
+        format: json
+        fields:
+          - { label: Fonte, name: source, widget: string }
+          - { label: Atualizado em, name: updatedAt, widget: datetime, date_format: YYYY-MM-DD, time_format: false }
+          - { label: Citações, name: citations, widget: number, value_type: int }
+          - { label: Fator H, name: hIndex, widget: number, value_type: int }
+          - { label: Índice i10, name: i10Index, widget: number, value_type: int }
+          - { label: Citações desde 2021, name: citationsSince2021, widget: number, value_type: int }
+          - { label: Fator H desde 2021, name: hIndexSince2021, widget: number, value_type: int }
+          - { label: Índice i10 desde 2021, name: i10IndexSince2021, widget: number, value_type: int }
+      - name: publications
+        label: Pesquisa - publicações
+        file: content/publications/index.json
+        format: json
+        fields:
+          - label: Texto da página
+            name: intro
+            widget: object
+            fields:
+              - { label: Chamada, name: eyebrow, widget: string }
+              - { label: Título, name: title, widget: string }
+              - { label: Instruções de busca, name: description, widget: text }
+          - label: Publicações locais/editáveis
+            name: publications
+            widget: list
+            summary: "{{year}} - {{title}}"
+            fields:
+              - { label: Título, name: title, widget: text }
+              - { label: Ano, name: year, widget: number, value_type: int }
+              - label: Tipo
+                name: type
+                widget: select
+                options: [Article, Book, Chapter, Preprint]
+              - { label: Tema principal, name: theme, widget: string }
+              - { label: Temas, name: themes, widget: list, required: false, field: { label: Tema, name: theme, widget: string } }
+              - { label: Autores, name: authors, widget: list, field: { label: Autor, name: author, widget: string } }
+              - { label: Revista/livro, name: journal, widget: string }
+              - { label: DOI, name: doi, widget: string, required: false }
+              - { label: PDF, name: pdf, widget: string, required: false }
+              - { label: Citações, name: citations, widget: number, value_type: int, default: 0 }
+              - { label: Resumo/descrição, name: abstract, widget: text }
+              - { label: Link externo, name: externalUrl, widget: string, required: false }
+              - { label: Google Scholar, name: scholarUrl, widget: string, required: false }
+              - { label: Fonte, name: source, widget: string, required: false }
+              - { label: Fonte das citações, name: citationSource, widget: string, required: false }

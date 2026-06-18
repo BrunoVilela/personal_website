@@ -92,8 +92,8 @@ export const researchThemes: ResearchTheme[] = [
   {
     title: "Methodological Development",
     slug: "desenvolvimento-metodologico",
-    image: "/images/research/rstudio-forest-workstation.svg",
-    imageAlt: "Researcher using RStudio with R code, scientific plots and a tropical forest in the background",
+    image: "/images/research/r-biodiversity-workstation.png",
+    imageAlt: "R programming workstation with biodiversity data, maps and scientific visualizations",
     summary: "Methods, algorithms and open tools that expand the capacity to study biodiversity at broad scales.",
     description: "Methodological development transforms raw occurrence, taxonomy, distribution and academic-output data into reproducible analytical objects for the scientific community.",
     projects: ["letsR", "expowo", "NUPEX", "Teaching R to ecologists", "Reproducible analytical workflows"],

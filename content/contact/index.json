@@ -1,0 +1,17 @@
+{
+  "intro": {
+    "eyebrow": "Contact",
+    "title": "Get in touch",
+    "description": "For collaborations, supervision, science communication or academic activities, use the form or institutional contact channels."
+  },
+  "email": "bruno.vilela@ufba.br",
+  "address": "Institute of Biology, UFBA, Rua Barao de Jeremoabo, Salvador, BA, Brazil",
+  "mapQuery": "Instituto de Biologia UFBA Salvador",
+  "form": {
+    "namePlaceholder": "Name",
+    "emailPlaceholder": "E-mail",
+    "institutionPlaceholder": "Institution",
+    "messagePlaceholder": "Message",
+    "buttonLabel": "Send message"
+  }
+}

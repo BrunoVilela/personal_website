@@ -6,11 +6,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { SectionHeading } from "@/components/section-heading";
-import { getAboutContent } from "@/lib/content";
+import { getAboutContent, getMetricsContent, getSoftwareContent, getTeamContent } from "@/lib/content";
 import { getSyncedPublications } from "@/lib/orcid-publications";
-import { scholarMetrics } from "@/data/site";
-import { supervision } from "@/data/supervision";
-import { software } from "@/data/software";
 import { projects } from "@/data/lab";
 import { researchThemes } from "@/data/research";
 import { formatNumber } from "@/lib/utils";
@@ -22,20 +19,23 @@ export const metadata: Metadata = {
 
 export default async function SobrePage() {
   const content = getAboutContent();
+  const metrics = getMetricsContent();
+  const team = getTeamContent();
+  const software = getSoftwareContent();
   const sync = await getSyncedPublications();
-  const completedPhd = supervision.filter((item) => item.level === "Doutorado" && item.status === "Concluída").length;
-  const completedMsc = supervision.filter((item) => item.level === "Mestrado" && item.status === "Concluída").length;
-  const completedTcc = supervision.filter((item) => item.level === "TCC" && item.status === "Concluída").length;
-  const currentStudents = supervision.filter((item) => item.status === "Em andamento").length;
+  const completedPhd = team.members.filter((item) => item.level === "Doutorado" && item.status === "Concluída").length;
+  const completedMsc = team.members.filter((item) => item.level === "Mestrado" && item.status === "Concluída").length;
+  const completedTcc = team.members.filter((item) => item.level === "TCC" && item.status === "Concluída").length;
+  const currentStudents = team.members.filter((item) => item.status === "Em andamento").length;
   const resourceStats = [
     { label: "Publications", value: sync.publications.length, suffix: "+" },
-    { label: "Citations", value: scholarMetrics.citations },
-    { label: "H-index", value: scholarMetrics.hIndex },
+    { label: "Citations", value: metrics.citations },
+    { label: "H-index", value: metrics.hIndex },
     { label: "Completed PhDs", value: completedPhd },
     { label: "Completed MScs", value: completedMsc },
     { label: "Completed undergraduate theses", value: completedTcc },
     { label: "Current supervisees", value: currentStudents },
-    { label: "Software tools", value: software.length },
+    { label: "Software tools", value: software.items.length },
     { label: "Projects", value: projects.length }
   ];
   const supervisionLevels = [
@@ -46,8 +46,8 @@ export default async function SobrePage() {
   ] as const;
   const supervisionSummary = supervisionLevels.map((entry) => ({
     ...entry,
-    current: supervision.filter((item) => item.level === entry.level && item.status === "Em andamento").length,
-    completed: supervision.filter((item) => item.level === entry.level && item.status === "Concluída").length
+    current: team.members.filter((item) => item.level === entry.level && item.status === "Em andamento").length,
+    completed: team.members.filter((item) => item.level === entry.level && item.status === "Concluída").length
   }));
 
   return (
