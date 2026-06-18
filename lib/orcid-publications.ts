@@ -253,14 +253,236 @@ function enrichKeyPublicationThemes(items: Publication[]) {
       journal: "Cuadernos de Herpetologia",
       authors: ["Bruno Vilela de Moraes e Silva", "Marcelo G L", "Ubiratan Goncalves", "Gabriel Omar Skuk Sugliano"]
     },
-    { match: "wallace a flexible platform", themes: ["Ecological Niche", "Biogeography", "Ecological Modelling", "Data Science"], year: 2018 },
-    { match: "stacked species distribution and macroecological models", themes: ["Macroecology", "Biogeography", "Ecological Modelling", "Biodiversity"], year: 2017 },
+    {
+      match: "intercontinental invasion dynamics of cercopagis pengoi",
+      themes: ["Biodiversity", "Invasion Biology", "Biogeography", "Conservation"],
+      year: 2024,
+      doi: "10.1007/s10113-024-02244-1",
+      journal: "Regional Environmental Change",
+      authors: ["Rafael L. Macedo", "Gabriel Klippel", "Daniel P. Silva", "Phillip J. Haubrock", "Bruno Vilela", "Stefano Mammola", "Odete Rocha", "Ana Clara S. Franco"]
+    },
+    {
+      match: "effect of behavioural plasticity and environmental properties",
+      themes: ["Data Science", "Ecological Modelling", "Conservation"],
+      year: 2022,
+      doi: "10.1016/j.ecolmodel.2022.110071",
+      journal: "Ecological Modelling",
+      authors: ["Emerson Campos Barbosa Junior", "Vitor Passos Rios", "Pavel Dodonov", "Bruno Vilela", "Hilton F. Japyassu"]
+    },
+    {
+      match: "reproductive notes and larval development of macrogenioglottus alipioi",
+      themes: ["Biodiversity", "Herpetology", "Natural History"],
+      year: 2022,
+      doi: "10.11606/issn.2316-9079.v21i2p181-203",
+      journal: "Phyllomedusa: Journal of Herpetology",
+      authors: ["Filipe Augusto C. Nascimento", "Anyelet Valencia Aguilar", "Andre Pansonato", "Barnagleison S. Lisboa", "Bruno Vilela"]
+    },
+    {
+      match: "drivers of global variation in land ownership",
+      themes: ["Cultural Evolution", "Human Ecology", "Macroecology"],
+      year: 2020,
+      doi: "10.1111/ecog.05205",
+      journal: "Ecography",
+      authors: [
+        "Patrick H. Kavanagh",
+        "Hannah J. Haynie",
+        "Geoff Kushnick",
+        "Bruno Vilela",
+        "Ty Tuff",
+        "Claire Bowern",
+        "Bobbi S. Low",
+        "Carol R. Ember",
+        "Kathryn R. Kirby",
+        "Carlos A. Botero",
+        "Michael C. Gavin"
+      ]
+    },
+    {
+      match: "pathways to social inequality",
+      themes: ["Cultural Evolution", "Human Ecology", "Evolution"],
+      year: 2021,
+      doi: "10.1017/ehs.2021.32",
+      journal: "Evolutionary Human Sciences",
+      authors: [
+        "Hannah J. Haynie",
+        "Patrick H. Kavanagh",
+        "Fiona M. Jordan",
+        "Carol R. Ember",
+        "Russell D. Gray",
+        "Simon J. Greenhill",
+        "Kathryn R. Kirby",
+        "Geoff Kushnick",
+        "Bobbi S. Low",
+        "Ty Tuff",
+        "Bruno Vilela",
+        "Carlos A. Botero",
+        "Michael C. Gavin"
+      ]
+    },
+    {
+      match: "are reptiles toast",
+      themes: ["Conservation", "Climate Change", "Biodiversity"],
+      year: 2020,
+      doi: "10.1007/s10584-020-02687-5",
+      journal: "Climatic Change",
+      authors: ["L. M. Diele-Viegas", "R. T. Figueroa", "B. Vilela", "C. F. D. Rocha"]
+    },
+    {
+      match: "assessing spatial and temporal biases and gaps",
+      themes: ["Biogeography", "Data Science", "Spatial Ecology", "Biodiversity"],
+      year: 2020,
+      doi: "10.3897/BDJ.8.e53474",
+      journal: "Biodiversity Data Journal",
+      authors: ["Cristina Ronquillo", "Fernanda Alves-Martins", "Vicente Mazimpaka", "Thadeu Sobral-Souza", "Bruno Vilela-Silva", "Nagore G. Medina", "Joaquin Hortal"]
+    },
+    {
+      match: "cultural transmission and ecological opportunity",
+      themes: ["Cultural Evolution", "Agriculture", "Human Ecology", "Macroecology"],
+      year: 2020,
+      doi: "10.1017/ehs.2020.55",
+      journal: "Evolutionary Human Sciences",
+      authors: ["Bruno Vilela", "Trevor Fristoe", "Ty Tuff", "Patrick H. Kavanagh", "Hannah J. Haynie", "Russell D. Gray", "Michael C. Gavin", "Carlos A. Botero"]
+    },
+    {
+      match: "global expansion of covid 19 pandemic",
+      themes: ["Human Ecology", "Macroecology", "Data Science"],
+      year: 2020,
+      doi: "10.7717/peerj.9708",
+      journal: "PeerJ",
+      authors: ["Marco Tulio Pacheco Coelho", "Joao Fabricio Mota Rodrigues", "Anderson Matos Medina", "Paulo Scalco", "Levi Carina Terribile", "Bruno Vilela", "Jose Alexandre Felizola Diniz-Filho", "Ricardo Dobrovolski"]
+    },
+    {
+      match: "ecological niche evolution on diversification patterns of birds",
+      themes: ["Evolution", "Macroevolution", "Biogeography", "Ecological Niche"],
+      year: 2020,
+      doi: "10.1371/journal.pone.0238729",
+      journal: "PLOS ONE",
+      authors: ["Ricardo Ribeiro da Silva", "Bruno Vilela", "Daniel Paiva Silva", "Andre Felipe Alves de Andrade", "Pablo Vieira Cerqueira", "Gabriela Silva Ribeiro Goncalves", "Marcos Persio Dantas Santos"]
+    },
+    {
+      match: "colonizing the east and the west",
+      themes: ["Biogeography", "Ecological Niche", "Invasion Biology"],
+      year: 2019,
+      doi: "10.1007/s13592-019-00711-x",
+      journal: "Apidologie",
+      authors: ["Daniel P. Silva", "Ana Carollina F. Castro", "Bruno Vilela", "Xin Rui Ong", "Jennifer C. Thomas", "Abdulaziz S. Alqarni", "Michael S. Engel", "John S. Ascher"]
+    },
+    {
+      match: "impacts of climate change on small ranged amphibians",
+      themes: ["Climate Change", "Biogeography", "Conservation", "Herpetology"],
+      year: 2018,
+      doi: "10.4257/oeco.2018.2202.03",
+      journal: "Oecologia Australis",
+      authors: ["Bruno Vilela", "Filipe Augusto Nascimento", "Marcos Vinicius Carneiro Vital"]
+    },
+    {
+      match: "no deaths in the desert",
+      themes: ["Conservation", "Climate Change", "Ecological Modelling"],
+      year: 2018,
+      doi: "10.1111/icad.12318",
+      journal: "Insect Conservation and Diversity",
+      authors: ["Daniel Paiva Silva", "Rebecca M. Dew", "Bruno Vilela", "Mark I. Stevens", "Michael P. Schwarz"]
+    },
+    {
+      match: "the global geography of human subsistence",
+      themes: ["Cultural Evolution", "Human Ecology", "Macroecology"],
+      year: 2018,
+      doi: "10.1098/rsos.171897",
+      journal: "Royal Society Open Science",
+      authors: ["Michael C. Gavin", "Patrick H. Kavanagh", "Hannah J. Haynie", "Claire Bowern", "Carol R. Ember", "Russell D. Gray", "Fiona M. Jordan", "Kathryn R. Kirby", "Geoff Kushnick", "Bobbi S. Low", "Bruno Vilela", "Carlos A. Botero"]
+    },
+    {
+      match: "wallace a flexible platform",
+      themes: ["Ecological Niche", "Biogeography", "Ecological Modelling", "Data Science"],
+      year: 2018,
+      doi: "10.1111/2041-210X.12945",
+      journal: "Methods in Ecology and Evolution",
+      authors: ["Jamie M. Kass", "Bruno Vilela", "Matthew E. Aiello-Lammens", "Robert Muscarella", "Cory Merow", "Robert P. Anderson"]
+    },
+    {
+      match: "spatial relationships between above ground biomass",
+      themes: ["Spatial Ecology", "Biodiversity", "Conservation"],
+      year: 2017,
+      doi: "10.1371/journal.pone.0186742",
+      journal: "PLOS ONE",
+      authors: ["Minerva Singh", "Daniel A. Friess", "Bruno Vilela", "Jose Don T. De Alban", "Angelica Kristina V. Monzon", "Rizza Karen A. Veridiano", "Roven D. Tumaneng"]
+    },
+    {
+      match: "stacked species distribution and macroecological models",
+      themes: ["Macroecology", "Biogeography", "Ecological Modelling", "Biodiversity"],
+      year: 2017,
+      doi: "10.1111/icad.12240",
+      journal: "Insect Conservation and Diversity",
+      authors: ["Renata Alves da Mata", "Rosana Tidon", "Guilherme de Oliveira", "Bruno Vilela", "Jose Alexandre Felizola Diniz-Filho", "Thiago Fernando Rangel", "Levi Carina Terribile"]
+    },
+    {
+      match: "structural bias in aggregated species level variables",
+      themes: ["Biogeography", "Data Science", "Macroecology"],
+      year: 2017,
+      doi: "10.1111/jbi.12953",
+      journal: "Journal of Biogeography",
+      authors: ["Bradford A. Hawkins", "Boris Leroy", "Miguel A. Rodriguez", "Alexander Singer", "Bruno Vilela", "Fabricio Villalobos", "Xiangping Wang", "David Zeleny"]
+    },
+    {
+      match: "contextualized niche shifts upon independent invasions",
+      themes: ["Biogeography", "Ecological Niche", "Invasion Biology"],
+      year: 2016,
+      doi: "10.1007/s10530-016-1204-4",
+      journal: "Biological Invasions",
+      authors: ["Daniel P. Silva", "Bruno Vilela", "Bruno A. Buzatto", "Armin P. Moczek", "Joaquin Hortal"]
+    },
+    {
+      match: "reproduction of agalychnis granulosa",
+      themes: ["Biodiversity", "Herpetology", "Natural History"],
+      year: 2014,
+      doi: "10.1080/00222933.2014.897764",
+      journal: "Journal of Natural History",
+      authors: ["Bruno Vilela", "Barnagleison Silva Lisboa", "Filipe Augusto Cavalcanti do Nascimento"]
+    },
+    {
+      match: "spthin an r package",
+      themes: ["Biogeography", "Ecological Niche", "Data Science", "Ecological Modelling", "Spatial Ecology"],
+      year: 2015,
+      doi: "10.1111/ecog.01132",
+      journal: "Ecography",
+      authors: ["Matthew E. Aiello-Lammens", "Robert A. Boria", "Aleksandar Radosavljevic", "Bruno Vilela", "Robert P. Anderson"]
+    },
+    {
+      match: "body size extinction risk and knowledge bias",
+      themes: ["Conservation", "Biodiversity", "Herpetology"],
+      year: 2014,
+      doi: "10.1371/journal.pone.0113429",
+      journal: "PLOS ONE",
+      authors: ["Bruno Vilela", "Fabricio Villalobos", "Miguel Angel Rodriguez", "Levi Carina Terribile"]
+    },
+    {
+      match: "sister neotropical orchid bees",
+      themes: ["Biogeography", "Ecological Niche", "Ecological Modelling", "Evolution"],
+      year: 2014,
+      doi: "10.1371/journal.pone.0113246",
+      journal: "PLOS ONE",
+      authors: ["Daniel P. Silva", "Bruno Vilela", "Paulo De Marco", "Andre Nemesio"]
+    },
+    {
+      match: "gabriel omar skuk sugliano",
+      themes: ["Obituary"],
+      year: 2011,
+      doi: "10.1590/S1984-46702011000300018",
+      journal: "Zoologia",
+      authors: ["Filipe A. Nascimento", "Bruno Vilela", "Barnagleison Lisboa"]
+    },
     { match: "letsr a new r package", themes: ["Macroecology", "Data Science", "Computational Ecology"] },
     { match: "expowo", themes: ["Data Science", "Biodiversity", "Biogeography", "Computational Ecology"] },
     { match: "clade replacement theory", themes: ["Macroevolution", "Evolution", "Biodiversity"] },
     { match: "effects of phenotypic plasticity", themes: ["Evolution", "Macroevolution", "Ecological Modelling", "Computational Ecology"] },
-    { match: "cultural transmission and ecological opportunity", themes: ["Cultural Evolution", "Agriculture", "Human Ecology", "Macroecology"] },
-    { match: "hindcasting global population densities", themes: ["Cultural Evolution", "Agriculture", "Human Ecology", "Macroecology", "Data Science"] },
+    {
+      match: "hindcasting global population densities",
+      themes: ["Cultural Evolution", "Agriculture", "Human Ecology", "Macroecology", "Data Science"],
+      year: 2018,
+      doi: "10.1038/s41562-018-0358-8",
+      journal: "Nature Human Behaviour",
+      authors: ["Patrick H. Kavanagh", "Bruno Vilela", "Hannah J. Haynie", "Ty Tuff", "Matheus Lima-Ribeiro", "Russell D. Gray", "Carlos A. Botero", "Michael C. Gavin"]
+    },
     { match: "origin of agriculture", themes: ["Cultural Evolution", "Agriculture", "Human Ecology", "Macroecology"] },
     { match: "biogeography and evolution of land ownership", themes: ["Cultural Evolution", "Biogeography", "Human Ecology"] },
     { match: "using fossil records to predict", themes: ["Biogeography", "Paleoecology", "Ecological Modelling", "Conservation"] },
