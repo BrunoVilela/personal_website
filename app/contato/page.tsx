@@ -1,10 +1,8 @@
 import { Metadata } from "next";
 import { Mail, MapPin } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { ContactForm } from "@/components/contact/contact-form";
 import { getContactContent } from "@/lib/content";
 
 export const metadata: Metadata = { title: "Contact" };
@@ -16,11 +14,8 @@ export default function ContatoPage() {
       <SectionHeading eyebrow={content.intro.eyebrow} title={content.intro.title} description={content.intro.description} />
       <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_0.8fr]">
         <Card>
-          <CardContent className="grid gap-4 p-6">
-            <div className="grid gap-2 md:grid-cols-2"><Input placeholder={content.form.namePlaceholder} /><Input type="email" placeholder={content.form.emailPlaceholder} /></div>
-            <Input placeholder={content.form.institutionPlaceholder} />
-            <Textarea placeholder={content.form.messagePlaceholder} />
-            <Button>{content.form.buttonLabel}</Button>
+          <CardContent className="p-6">
+            <ContactForm form={content.form} />
           </CardContent>
         </Card>
         <div className="grid gap-4">

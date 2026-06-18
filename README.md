@@ -140,6 +140,19 @@ Se essas variáveis não existirem, o painel abre normalmente, mas as alteraçõ
 
 Para usuários sem programação, o fluxo esperado é: abrir `/admin`, editar campos, salvar e aguardar a Vercel atualizar o site.
 
+
+## Configurar envio do formulário de contato
+
+O formulário em `/contato` envia mensagens pela rota `/api/contact` para `bvilela.bv@gmail.com` por padrão. Em produção, configure estas variáveis na Vercel em Project Settings > Environment Variables:
+
+```text
+RESEND_API_KEY=sua_chave_da_resend
+CONTACT_EMAIL_TO=bvilela.bv@gmail.com
+CONTACT_EMAIL_FROM=Website contact <no-reply@bvilela.com>
+```
+
+`CONTACT_EMAIL_TO` e `CONTACT_EMAIL_FROM` são opcionais, mas recomenda-se verificar o domínio `bvilela.com` no Resend e usar um remetente do próprio domínio, como `no-reply@bvilela.com`. Depois de salvar as variáveis, faça um novo deploy na Vercel.
+
 ## Integração ORCID e CrossRef
 
 A página `/publicacoes` usa `lib/orcid-publications.ts` para tentar sincronizar automaticamente com o ORCID público `0000-0003-4072-0558`, com revalidação diária e fallback para os dados locais. O arquivo `lib/integrations.ts` mantém funções auxiliares iniciais:
