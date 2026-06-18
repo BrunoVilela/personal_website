@@ -4,6 +4,7 @@ import "./globals.css";
 import { siteConfig } from "@/data/site";
 import { Providers } from "@/components/providers";
 import { SiteChrome } from "@/components/site/site-chrome";
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -86,6 +87,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <SiteChrome>{children}</SiteChrome>
         </Providers>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+        <Analytics />
       </body>
     </html>
   );
