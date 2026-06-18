@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { ExternalLink, FileText, GraduationCap, IdCard, Search } from "lucide-react";
+import { ExternalLink, FileText, GraduationCap, History, IdCard, Search } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -74,6 +74,20 @@ function TeamCard({ item }: { item: ReturnType<typeof getTeamContent>["members"]
           <Badge variant="outline">{item.year}</Badge>
         </div>
         <p className="mt-2 text-sm leading-6 text-muted-foreground">{item.title}</p>
+        {item.previousProjects?.length ? (
+          <div className="mt-4 rounded-md border border-border/80 bg-secondary/35 p-3">
+            <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+              <History className="size-3.5" /> Previous projects
+            </p>
+            <div className="mt-2 grid gap-2">
+              {item.previousProjects.map((project) => (
+                <p key={`${project.year}-${project.level}-${project.title}`} className="text-xs leading-5 text-muted-foreground">
+                  <span className="font-medium text-foreground">{project.year} ({formatLevel(project.level)})</span> - {project.title}
+                </p>
+              ))}
+            </div>
+          </div>
+        ) : null}
         <p className="mt-3 text-sm font-medium">{item.program}</p>
         <p className="text-sm text-muted-foreground">{item.institution}</p>
         {item.funding ? <p className="mt-2 text-xs uppercase tracking-wide text-accent">{item.funding}</p> : null}
@@ -81,7 +95,7 @@ function TeamCard({ item }: { item: ReturnType<typeof getTeamContent>["members"]
           {item.lattes ? <ProfileButton href={item.lattes} label="Lattes" icon="lattes" /> : null}
           {item.scholar ? <ProfileButton href={item.scholar} label="Scholar" icon="scholar" /> : null}
           {item.orcid ? <ProfileButton href={item.orcid} label="ORCID" icon="orcid" /> : null}
-          {item.thesisUrl ? <ProfileButton href={item.thesisUrl} label={item.level === "Doutorado" ? "Thesis" : "Dissertation"} icon="thesis" /> : null}
+          {item.thesisUrl ? <ProfileButton href={item.thesisUrl} label={item.level === "Doutorado" ? "Thesis" : item.level === "Mestrado" ? "Dissertation" : "Work"} icon="thesis" /> : null}
           {!item.lattes && !item.scholar && !item.orcid && !item.thesisUrl ? (
             <span className="text-xs text-muted-foreground">No public profiles found.</span>
           ) : null}
@@ -93,6 +107,7 @@ function TeamCard({ item }: { item: ReturnType<typeof getTeamContent>["members"]
 
 function formatLevel(level: ReturnType<typeof getTeamContent>["members"][number]["level"]) {
   const labels = {
+    "Pós-doutorado": "Postdoctoral Research",
     Doutorado: "PhD",
     Mestrado: "MSc",
     "Iniciação Científica": "Undergraduate Research",

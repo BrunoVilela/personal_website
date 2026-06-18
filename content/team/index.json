@@ -107,7 +107,14 @@
       "program": "Biological Sciences",
       "orientation": "Orientação",
       "emoji": "🔬",
-      "funding": "CNPq"
+      "funding": "CNPq",
+      "previousProjects": [
+        {
+          "title": "Contextualized niche shifts of the American bullfrog Lithobates catesbeianus",
+          "year": 2024,
+          "level": "Iniciação Científica"
+        }
+      ]
     },
     {
       "student": "Leno Eduardo Conceicao Torres",
@@ -283,6 +290,18 @@
       "emoji": "🌎"
     },
     {
+      "student": "Bruna de Mattos Farina",
+      "title": "Unrevealing the role of evolutionary landscape on the diversification of species",
+      "level": "Pós-doutorado",
+      "status": "Concluída",
+      "year": 2026,
+      "institution": "Federal University of Bahia",
+      "program": "Postdoctoral supervision",
+      "orientation": "Orientação principal",
+      "emoji": "🧬",
+      "funding": "CNPq"
+    },
+    {
       "student": "Ana Paula Andrade Miranda",
       "title": "Do older species occupy the center of environmental space compared with younger species?",
       "level": "Iniciação Científica",
@@ -309,26 +328,21 @@
     {
       "student": "Kelly de Jesus Santos",
       "title": "Modeling the distribution of endemic Brazilian species of the genus Millepora",
-      "level": "Iniciação Científica",
+      "level": "TCC",
       "status": "Concluída",
       "year": 2023,
       "institution": "Federal University of Bahia",
       "program": "Biological Sciences",
       "orientation": "Orientação",
       "emoji": "🪸",
-      "funding": "FAPESB"
-    },
-    {
-      "student": "Herberty Lay Machado",
-      "title": "Contextualized niche shifts of the American bullfrog Lithobates catesbeianus",
-      "level": "Iniciação Científica",
-      "status": "Concluída",
-      "year": 2024,
-      "institution": "Federal University of Bahia",
-      "program": "Biological Sciences",
-      "orientation": "Orientação",
-      "emoji": "🐸",
-      "funding": "CNPq"
+      "funding": "FAPESB",
+      "previousProjects": [
+        {
+          "title": "Modeling the distribution of endemic Brazilian species of the genus Millepora",
+          "year": 2023,
+          "level": "Iniciação Científica"
+        }
+      ]
     },
     {
       "student": "Maria Lua Vinhaes Dantas Costa",
@@ -340,17 +354,6 @@
       "program": "Biological Sciences",
       "orientation": "Orientação",
       "emoji": "🎓"
-    },
-    {
-      "student": "Kelly de Jesus Santos",
-      "title": "Modeling the distribution of endemic Brazilian species of the genus Millepora",
-      "level": "TCC",
-      "status": "Concluída",
-      "year": 2023,
-      "institution": "Federal University of Bahia",
-      "program": "Biological Sciences",
-      "orientation": "Orientação",
-      "emoji": "🪸"
     },
     {
       "student": "Solange Gonçalves da Silva",

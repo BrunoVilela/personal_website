@@ -164,7 +164,7 @@ collections:
               - label: Nível
                 name: level
                 widget: select
-                options: [Doutorado, Mestrado, Iniciação Científica, TCC]
+                options: [Pós-doutorado, Doutorado, Mestrado, Iniciação Científica, TCC]
               - label: Status
                 name: status
                 widget: select
@@ -182,6 +182,17 @@ collections:
               - { label: Scholar, name: scholar, widget: string, required: false }
               - { label: ORCID, name: orcid, widget: string, required: false }
               - { label: Link tese/dissertação/TCC, name: thesisUrl, widget: string, required: false }
+              - label: Projetos anteriores
+                name: previousProjects
+                widget: list
+                required: false
+                fields:
+                  - { label: Título, name: title, widget: text }
+                  - { label: Ano de conclusão, name: year, widget: number, value_type: int }
+                  - label: Grau
+                    name: level
+                    widget: select
+                    options: [Pós-doutorado, Doutorado, Mestrado, Iniciação Científica, TCC]
               - { label: Foto, name: photo, widget: image, required: false }
               - { label: Emoji, name: emoji, widget: string, required: false }
       - name: software

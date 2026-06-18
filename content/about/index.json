@@ -18,7 +18,7 @@
     "He earned his degree in Biological Sciences from the Federal University of Alagoas (UFAL), where he began his training in natural history and biodiversity. He completed a master’s degree in Biological Diversity and Conservation in the Tropics at the same institution and received a PhD in Ecology and Evolution from the Federal University of Goiás (UFG), with a co-tutorship period at Universidad de Alcalá, Spain. Between 2016 and 2018, he held a postdoctoral position at Washington University in St. Louis, United States, deepening his work in macroecology, biogeography and modelling global biodiversity patterns.",
     "Since 2018, he has been a faculty member at UFBA, training undergraduate and graduate students and teaching courses in Ecology, Biostatistics, Scientific Programming and Geospatial Methods. His research seeks to understand how ecological, evolutionary and environmental factors influence biodiversity distribution, niche evolution, climate-change impacts on species and ecosystems, the challenges of large-scale conservation and the parallels between biological and cultural diversity.",
     "Throughout his career, he has developed and applied quantitative approaches based on large databases, spatial modelling, artificial intelligence and reproducible computational methods. He also actively contributes to open science through the development of, and collaboration on, tools widely used by the scientific community, including the R packages letsR, Wallace, spThin, expowo and randtip, as well as initiatives related to standardizing and integrating biodiversity data.",
-    "Beyond research, he is dedicated to training students, coordinating academic programs and building national and international collaborative networks. His work involves research projects on biodiversity, conservation and ecological synthesis, connecting disciplines and scales of investigation.",
+    "Beyond research, he is dedicated to training students, coordinating academic programs and building national and international collaborative networks. His work involves research projects on biodiversity, conservation and ecological synthesis, connecting disciplines and scales of investigation. Since 2024, he has been a CNPq Productivity Research Fellow (level 2), a national recognition of sustained scientific contribution in Brazil.",
     "Among the recognitions received throughout his career are the CAPES Thesis Award in Biodiversity, selection as a finalist in the GBIF Ebbe Nielsen Challenge, and recognition for his contribution to training new researchers through award-winning supervised work at the Federal University of Bahia."
   ],
   "cvUrl": "/downloads/bruno-vilela-cv-english.pdf",
@@ -68,6 +68,11 @@
       "period": "2024-2025",
       "title": "NUPEX Vice Coordination",
       "description": "Vice coordinator of the Research, Extension, Creation and Innovation Center of the Institute of Biology."
+    },
+    {
+      "period": "2024-present",
+      "title": "CNPq Productivity Research Fellow",
+      "description": "Research Productivity Fellowship from the Brazilian National Council for Scientific and Technological Development (CNPq), level 2."
     },
     {
       "period": "2025-present",

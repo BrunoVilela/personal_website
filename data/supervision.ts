@@ -1,7 +1,7 @@
 export type Supervision = {
   student: string;
   title: string;
-  level: "Doutorado" | "Mestrado" | "Iniciação Científica" | "TCC";
+  level: "Pós-doutorado" | "Doutorado" | "Mestrado" | "Iniciação Científica" | "TCC";
   status: "Em andamento" | "Concluída";
   year: number;
   institution: string;
@@ -14,6 +14,7 @@ export type Supervision = {
   thesisUrl?: string;
   photo?: string;
   emoji?: string;
+  previousProjects?: Array<{ title: string; year: number; level: Supervision["level"] }>;
 };
 
 export const supervision: Supervision[] = [
@@ -121,7 +122,14 @@ export const supervision: Supervision[] = [
     "program": "Biological Sciences",
     "orientation": "Orientação",
     "emoji": "🔬",
-    "funding": "CNPq"
+    "funding": "CNPq",
+    "previousProjects": [
+      {
+        "title": "Contextualized niche shifts of the American bullfrog Lithobates catesbeianus",
+        "year": 2024,
+        "level": "Iniciação Científica"
+      }
+    ]
   },
   {
     "student": "Leno Eduardo Conceicao Torres",
@@ -297,6 +305,18 @@ export const supervision: Supervision[] = [
     "emoji": "🌎"
   },
   {
+    "student": "Bruna de Mattos Farina",
+    "title": "Unrevealing the role of evolutionary landscape on the diversification of species",
+    "level": "Pós-doutorado",
+    "status": "Concluída",
+    "year": 2026,
+    "institution": "Federal University of Bahia",
+    "program": "Postdoctoral supervision",
+    "orientation": "Orientação principal",
+    "emoji": "🧬",
+    "funding": "CNPq"
+  },
+  {
     "student": "Ana Paula Andrade Miranda",
     "title": "Do older species occupy the center of environmental space compared with younger species?",
     "level": "Iniciação Científica",
@@ -323,26 +343,21 @@ export const supervision: Supervision[] = [
   {
     "student": "Kelly de Jesus Santos",
     "title": "Modeling the distribution of endemic Brazilian species of the genus Millepora",
-    "level": "Iniciação Científica",
+    "level": "TCC",
     "status": "Concluída",
     "year": 2023,
     "institution": "Federal University of Bahia",
     "program": "Biological Sciences",
     "orientation": "Orientação",
     "emoji": "🪸",
-    "funding": "FAPESB"
-  },
-  {
-    "student": "Herberty Lay Machado",
-    "title": "Contextualized niche shifts of the American bullfrog Lithobates catesbeianus",
-    "level": "Iniciação Científica",
-    "status": "Concluída",
-    "year": 2024,
-    "institution": "Federal University of Bahia",
-    "program": "Biological Sciences",
-    "orientation": "Orientação",
-    "emoji": "🐸",
-    "funding": "CNPq"
+    "funding": "FAPESB",
+    "previousProjects": [
+      {
+        "title": "Modeling the distribution of endemic Brazilian species of the genus Millepora",
+        "year": 2023,
+        "level": "Iniciação Científica"
+      }
+    ]
   },
   {
     "student": "Maria Lua Vinhaes Dantas Costa",
@@ -354,17 +369,6 @@ export const supervision: Supervision[] = [
     "program": "Biological Sciences",
     "orientation": "Orientação",
     "emoji": "🎓"
-  },
-  {
-    "student": "Kelly de Jesus Santos",
-    "title": "Modeling the distribution of endemic Brazilian species of the genus Millepora",
-    "level": "TCC",
-    "status": "Concluída",
-    "year": 2023,
-    "institution": "Federal University of Bahia",
-    "program": "Biological Sciences",
-    "orientation": "Orientação",
-    "emoji": "🪸"
   },
   {
     "student": "Solange Gonçalves da Silva",
