@@ -368,6 +368,14 @@ function enrichKeyPublicationThemes(items: Publication[]) {
       authors: ["Daniel P. Silva", "Ana Carollina F. Castro", "Bruno Vilela", "Xin Rui Ong", "Jennifer C. Thomas", "Abdulaziz S. Alqarni", "Michael S. Engel", "John S. Ascher"]
     },
     {
+      match: "inferring host cleptoparasite complexes of south american centridine bees",
+      themes: ["Macroecology", "Biogeography", "Biodiversity"],
+      year: 2019,
+      doi: "10.1007/s13127-019-00394-3",
+      journal: "Organisms Diversity & Evolution",
+      authors: ["Felipe Vivallo", "Bruno Vilela", "Daniel Paiva Silva"]
+    },
+    {
       match: "impacts of climate change on small ranged amphibians",
       themes: ["Climate Change", "Biogeography", "Conservation", "Herpetology"],
       year: 2018,
