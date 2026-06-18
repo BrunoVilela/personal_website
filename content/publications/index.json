@@ -7,40 +7,39 @@
   "publications": [
     {
       "abstract": "Analyzes age-related trends in niche position and specialization in Neotropical vertebrates.",
+      "citationSource": "CrossRef",
+      "externalUrl": "https://doi.org/10.1002/ecog.08192",
       "authors": [
         "Carlos Calderón del Cid",
         "Fabricio Villalobos",
         "Ricardo Dobrovolski",
         "Bruno Vilela"
       ],
-      "citationSource": "CrossRef",
-      "citations": 0,
-      "doi": "10.1002/ecog.08192",
-      "externalUrl": "https://doi.org/10.1002/ecog.08192",
-      "journal": "Ecography",
       "scholarUrl": "https://scholar.google.com/scholar?q=Age%E2%80%90related%20trends%20in%20niche%20position%20and%20specialization%20in%20Neotropical%20vertebrates",
-      "source": "ORCID + CrossRef",
       "theme": "Biogeography",
       "themes": [
         "Biogeography",
-        "Ecological Niche"
+        "Ecological Niche",
+        "Macroecology",
+        "Evolution"
       ],
+      "citations": 0,
+      "journal": "Ecography",
       "title": "Age‐related trends in niche position and specialization in Neotropical vertebrates",
       "type": "Article",
-      "year": 2026
+      "source": "ORCID + CrossRef",
+      "year": 2026,
+      "doi": "10.1002/ecog.08192"
     },
     {
       "abstract": "Article on morphological remodeling and metabolic responses associated with feeding in Boa constrictor.",
+      "externalUrl": "https://doi.org/10.1016/j.cbpb.2026.111207",
       "authors": [
         "Helena Rachel da Mota Araujo",
         "José Eduardo de Carvalho",
         "Bruno Vilela de Moraes e Silva",
         "André Luís da Cruz"
       ],
-      "citations": 0,
-      "doi": "10.1016/j.cbpb.2026.111207",
-      "externalUrl": "https://doi.org/10.1016/j.cbpb.2026.111207",
-      "journal": "Comparative Biochemistry and Physiology B-Biochemistry & Molecular Biology",
       "scholarUrl": "https://scholar.google.com/scholar?q=Feeding%20induces%20morphological%20remodeling%20but%20not%20metabolic%20activation%20in%20Boa%20constrictor%20(Serpentes%2C%20Boidae)",
       "theme": "Evolution",
       "themes": [
@@ -48,9 +47,12 @@
         "Physiology",
         "Functional Ecology"
       ],
+      "citations": 0,
+      "journal": "Comparative Biochemistry and Physiology B-Biochemistry & Molecular Biology",
       "title": "Feeding induces morphological remodeling but not metabolic activation in Boa constrictor (Serpentes, Boidae)",
       "type": "Article",
-      "year": 2026
+      "year": 2026,
+      "doi": "10.1016/j.cbpb.2026.111207"
     },
     {
       "abstract": "Accepted article on pedagogical challenges in teaching the R language to ecologists.",
@@ -65,9 +67,6 @@
         "Ana Julia Oliveira Silva",
         "Beatriz Milz"
       ],
-      "citations": 0,
-      "doi": "",
-      "journal": "Oecologia Australis",
       "scholarUrl": "https://scholar.google.com/scholar?q=The%20Challenges%20and%20Nuances%20of%20Teaching%20the%20R%20Programming%20Language%20to%20Ecologists",
       "theme": "Data Science",
       "themes": [
@@ -75,22 +74,22 @@
         "Teaching",
         "Computational Ecology"
       ],
+      "citations": 0,
+      "journal": "Oecologia Australis",
       "title": "The Challenges and Nuances of Teaching the R Programming Language to Ecologists",
       "type": "Article",
-      "year": 2026
+      "year": 2026,
+      "doi": ""
     },
     {
       "abstract": "Study on the role of cacao agroforests as foraging areas for bats in southern Bahia.",
+      "externalUrl": "https://doi.org/10.1016/j.foreco.2026.123528",
       "authors": [
         "Enée Gottschalk",
         "Bruno Vilela de Moraes e Silva",
         "Karla Vieira Morato",
         "Deborah Faria"
       ],
-      "citations": 0,
-      "doi": "10.1016/j.foreco.2026.123528",
-      "externalUrl": "https://doi.org/10.1016/j.foreco.2026.123528",
-      "journal": "Forest Ecology and Management",
       "scholarUrl": "https://scholar.google.com/scholar?q=The%20role%20of%20cacao%20agroforests%20as%20foraging%20grounds%20for%20two%20bat%20species%20in%20southern%20Bahia%2C%20Brazil",
       "theme": "Conservation",
       "themes": [
@@ -99,9 +98,12 @@
         "Biodiversity",
         "Human Ecology"
       ],
+      "citations": 0,
+      "journal": "Forest Ecology and Management",
       "title": "The role of cacao agroforests as foraging grounds for two bat species in southern Bahia, Brazil",
       "type": "Article",
-      "year": 2026
+      "year": 2026,
+      "doi": "10.1016/j.foreco.2026.123528"
     },
     {
       "abstract": "Accepted article imported from the Lattes CV, focused on white-muscle and mitochondrial traits in Amazonian fishes.",
@@ -111,9 +113,6 @@
         "Bruno Vilela de Moraes e Silva",
         "Adalberto Luis Val"
       ],
-      "citations": 0,
-      "doi": "",
-      "journal": "Comparative Biochemistry and Physiology. Part A, Molecular & Integrative Physiology",
       "scholarUrl": "https://scholar.google.com/scholar?q=White%20muscle%20and%20mitochondrial%20traits%20under%20different%20locomotor%20demands%20in%20Amazonian%20fishes",
       "theme": "Comparative Ecology",
       "themes": [
@@ -122,12 +121,16 @@
         "Physiology",
         "Biodiversity"
       ],
+      "citations": 0,
+      "journal": "Comparative Biochemistry and Physiology. Part A, Molecular & Integrative Physiology",
       "title": "White muscle and mitochondrial traits under different locomotor demands in Amazonian fishes",
       "type": "Article",
-      "year": 2026
+      "year": 2026,
+      "doi": ""
     },
     {
       "abstract": "Assesses evolutionary distinctiveness in a highly threatened plant group in Brazil.",
+      "externalUrl": "https://doi.org/10.1002/ppp3.70088",
       "authors": [
         "Najla Bastos Scheidegger",
         "Raquel C. Pizzardo",
@@ -135,32 +138,27 @@
         "Thuane Bochorny",
         "Juliana Gastaldello Rando"
       ],
-      "citations": 0,
-      "doi": "10.1002/ppp3.70088",
-      "externalUrl": "https://doi.org/10.1002/ppp3.70088",
-      "journal": "PLANTS, PEOPLE, PLANET",
-      "source": "ORCID + CrossRef",
       "theme": "Evolution",
       "themes": [
         "Evolution"
       ],
+      "citations": 0,
+      "journal": "PLANTS, PEOPLE, PLANET",
       "title": "Assessing the evolutionary distinctiveness of a highly threatened plant group: The urgency to preserve a unique lineage of evolution in Brazil",
       "type": "Article",
-      "year": 2025
+      "source": "ORCID + CrossRef",
+      "year": 2025,
+      "doi": "10.1002/ppp3.70088"
     },
     {
       "abstract": "Simulation-based study on phenotypic plasticity, diversification and adaptive evolution.",
+      "externalUrl": "https://doi.org/10.1016/j.ecolmodel.2024.110983",
       "authors": [
         "Emerson Campos Barbosa Júnior",
         "Pavel Dodonov",
         "Hilton F. Japyassú",
         "Bruno Vilela"
       ],
-      "citations": 0,
-      "doi": "10.1016/j.ecolmodel.2024.110983",
-      "externalUrl": "https://doi.org/10.1016/j.ecolmodel.2024.110983",
-      "journal": "Ecological Modelling",
-      "source": "ORCID + CrossRef",
       "theme": "Evolution",
       "themes": [
         "Evolution",
@@ -168,12 +166,17 @@
         "Ecological Modelling",
         "Computational Ecology"
       ],
+      "citations": 0,
+      "journal": "Ecological Modelling",
       "title": "Effects of phenotypic plasticity on diversification rates and adaptive evolution in simulated environments with different climatic and cost contexts",
       "type": "Article",
-      "year": 2025
+      "source": "ORCID + CrossRef",
+      "year": 2025,
+      "doi": "10.1016/j.ecolmodel.2024.110983"
     },
     {
       "abstract": "Investigates social and environmental drivers of birdwatching in Brazil and implications for conservation planning.",
+      "externalUrl": "https://doi.org/10.1177/19400829251405826",
       "authors": [
         "Rafael Félix",
         "Bruno Vilela de Moraes e Silva",
@@ -182,10 +185,6 @@
         "Blandina Viana",
         "Charbel El-Hani"
       ],
-      "citations": 0,
-      "doi": "10.1177/19400829251405826",
-      "externalUrl": "https://doi.org/10.1177/19400829251405826",
-      "journal": "Tropical Conservation Science",
       "scholarUrl": "https://scholar.google.com/scholar?q=Social%20and%20Environmental%20Drivers%20of%20Birdwatching%20in%20Brazil%3A%20Implications%20for%20Conservation%20Planning",
       "theme": "Conservation",
       "themes": [
@@ -193,12 +192,16 @@
         "Human Ecology",
         "Biodiversity"
       ],
+      "citations": 0,
+      "journal": "Tropical Conservation Science",
       "title": "Social and Environmental Drivers of Birdwatching in Brazil: Implications for Conservation Planning",
       "type": "Article",
-      "year": 2025
+      "year": 2025,
+      "doi": "10.1177/19400829251405826"
     },
     {
       "abstract": "Assesses potential climate-change effects on medicinal plants from the Brazilian Cerrado.",
+      "externalUrl": "https://doi.org/10.1007/s10531-025-03188-6",
       "authors": [
         "Leonardo Almeida Guerra dos Santos",
         "Bruno Vilela de Moraes e Silva",
@@ -206,10 +209,6 @@
         "Washington Soares Ferreira Junior",
         "Daniel de Paiva Silva"
       ],
-      "citations": 0,
-      "doi": "10.1007/s10531-025-03188-6",
-      "externalUrl": "https://doi.org/10.1007/s10531-025-03188-6",
-      "journal": "Biodiversity and Conservation",
       "scholarUrl": "https://scholar.google.com/scholar?q=The%20potential%20effects%20of%20climate%20change%20on%20medicinal%20plants%20from%20the%20Brazilian%20Cerrado%20in%20South%20America",
       "theme": "Climate Change",
       "themes": [
@@ -218,12 +217,17 @@
         "Ecological Modelling",
         "Biodiversity"
       ],
+      "citations": 0,
+      "journal": "Biodiversity and Conservation",
       "title": "The potential effects of climate change on medicinal plants from the Brazilian Cerrado in South America",
       "type": "Article",
-      "year": 2025
+      "year": 2025,
+      "doi": "10.1007/s10531-025-03188-6"
     },
     {
       "abstract": "Integrative approach to understand the species complex of the fire bee Oxytrigona tataira.",
+      "citationSource": "CrossRef",
+      "externalUrl": "https://doi.org/10.1007/s13592-024-01136-x",
       "authors": [
         "Ramon Lima Ramos",
         "Favízia Freitas de Oliveira",
@@ -231,23 +235,22 @@
         "Bruno Vilela",
         "Alessandra Selbach Schnadelbach"
       ],
-      "citationSource": "CrossRef",
-      "citations": 0,
-      "doi": "10.1007/s13592-024-01136-x",
-      "externalUrl": "https://doi.org/10.1007/s13592-024-01136-x",
-      "journal": "Apidologie",
       "scholarUrl": "https://scholar.google.com/scholar?q=Unraveling%20the%20species%20complex%20of%20the%20fire%20bee%20Oxytrigona%20tataira%20(Hymenoptera%2C%20Apidae%2C%20Meliponini)%3A%20an%20integrative%20approach",
-      "source": "ORCID + CrossRef",
       "theme": "Biodiversity",
       "themes": [
         "Biodiversity"
       ],
+      "citations": 0,
+      "journal": "Apidologie",
       "title": "Unraveling the species complex of the fire bee Oxytrigona tataira (Hymenoptera, Apidae, Meliponini): an integrative approach",
       "type": "Article",
-      "year": 2025
+      "source": "ORCID + CrossRef",
+      "year": 2025,
+      "doi": "10.1007/s13592-024-01136-x"
     },
     {
       "abstract": "R package for mining global plant diversity and distribution data.",
+      "externalUrl": "https://doi.org/10.1002/aps3.11609",
       "authors": [
         "Débora C. Zuanny",
         "Bruno Vilela",
@@ -255,11 +258,6 @@
         "Tiina E. Särkinen",
         "Domingos Cardoso"
       ],
-      "citations": 0,
-      "doi": "10.1002/aps3.11609",
-      "externalUrl": "https://doi.org/10.1002/aps3.11609",
-      "journal": "Applications in Plant Sciences",
-      "source": "ORCID + CrossRef",
       "theme": "Data Science",
       "themes": [
         "Data Science",
@@ -267,12 +265,18 @@
         "Biogeography",
         "Computational Ecology"
       ],
+      "citations": 0,
+      "journal": "Applications in Plant Sciences",
       "title": "expowo: An R package for mining global plant diversity and distribution data",
       "type": "Article",
-      "year": 2024
+      "source": "ORCID + CrossRef",
+      "year": 2024,
+      "doi": "10.1002/aps3.11609"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "citationSource": "CrossRef",
+      "externalUrl": "https://doi.org/10.1007/s10113-024-02244-1",
       "authors": [
         "Rafael L. Macedo",
         "Gabriel Klippel",
@@ -283,13 +287,7 @@
         "Odete Rocha",
         "Ana Clara S. Franco"
       ],
-      "citationSource": "CrossRef",
-      "citations": 0,
-      "doi": "10.1007/s10113-024-02244-1",
-      "externalUrl": "https://doi.org/10.1007/s10113-024-02244-1",
-      "journal": "Regional Environmental Change",
       "scholarUrl": "https://scholar.google.com/scholar?q=Intercontinental%20invasion%20dynamics%20of%20Cercopagis%20pengoi%2C%20an%20IUCN-listed%20planktonic%20invasive%20species",
-      "source": "ORCID + CrossRef",
       "theme": "Biodiversity",
       "themes": [
         "Biodiversity",
@@ -297,12 +295,17 @@
         "Biogeography",
         "Conservation"
       ],
+      "citations": 0,
+      "journal": "Regional Environmental Change",
       "title": "Intercontinental invasion dynamics of Cercopagis pengoi, an IUCN-listed planktonic invasive species",
       "type": "Article",
-      "year": 2024
+      "source": "ORCID + CrossRef",
+      "year": 2024,
+      "doi": "10.1007/s10113-024-02244-1"
     },
     {
       "abstract": "Analyzes niche and global potential distribution of four invasive bumblebees.",
+      "externalUrl": "https://doi.org/10.1002/ece3.11200",
       "authors": [
         "Tania Paola López‐Aguilar",
         "Jose Montalva",
@@ -312,23 +315,23 @@
         "Carolina L. Morales",
         "Daniel de Paiva Silva"
       ],
-      "citations": 0,
-      "doi": "10.1002/ece3.11200",
-      "externalUrl": "https://doi.org/10.1002/ece3.11200",
-      "journal": "Ecology and Evolution",
-      "source": "ORCID + CrossRef",
       "theme": "Evolution",
       "themes": [
         "Evolution",
         "Biogeography",
         "Ecological Niche"
       ],
+      "citations": 0,
+      "journal": "Ecology and Evolution",
       "title": "Niche analyses and the potential distribution of four invasive bumblebees worldwide",
       "type": "Article",
-      "year": 2024
+      "source": "ORCID + CrossRef",
+      "year": 2024,
+      "doi": "10.1002/ece3.11200"
     },
     {
       "abstract": "Study of repeatome evolution across space and time in the plant genus Klotzsch, imported from the publication list.",
+      "externalUrl": "https://doi.org/10.1111/mec.17510",
       "authors": [
         "N. Castro",
         "Bruno Vilela",
@@ -339,12 +342,7 @@
         "L. Costa",
         "G. Souza"
       ],
-      "citations": 0,
-      "doi": "10.1111/mec.17510",
-      "externalUrl": "https://doi.org/10.1111/mec.17510",
-      "journal": "Molecular Ecology",
       "scholarUrl": "https://scholar.google.com/scholar?q=Repeatome%20evolution%20across%20space%20and%20time%3A%20unravelling%20repeats%20dynamics%20in%20the%20plant%20genus%20Klotzsch%20(Leguminosae%20Juss.)",
-      "source": "Publication list",
       "theme": "Evolution",
       "themes": [
         "Evolution",
@@ -352,12 +350,17 @@
         "Biodiversity",
         "Plant Biology"
       ],
+      "citations": 0,
+      "journal": "Molecular Ecology",
       "title": "Repeatome evolution across space and time: unravelling repeats dynamics in the plant genus Klotzsch (Leguminosae Juss.)",
       "type": "Article",
-      "year": 2024
+      "source": "Publication list",
+      "year": 2024,
+      "doi": "10.1111/mec.17510"
     },
     {
       "abstract": "Proposes a framework to study age-dependent extinction in clades.",
+      "externalUrl": "https://doi.org/10.1093/jeb/voae012",
       "authors": [
         "Carlos Calderón del Cid",
         "Fabricio Villalobos",
@@ -366,23 +369,23 @@
         "Daniele Silvestro",
         "Bruno Vilela"
       ],
-      "citations": 0,
-      "doi": "10.1093/jeb/voae012",
-      "externalUrl": "https://doi.org/10.1093/jeb/voae012",
-      "journal": "Journal of Evolutionary Biology",
-      "source": "ORCID + CrossRef",
       "theme": "Macroevolution",
       "themes": [
         "Macroevolution",
         "Evolution",
         "Biodiversity"
       ],
+      "citations": 0,
+      "journal": "Journal of Evolutionary Biology",
       "title": "The Clade Replacement Theory: a framework to study age-dependent extinction",
       "type": "Article",
-      "year": 2024
+      "source": "ORCID + CrossRef",
+      "year": 2024,
+      "doi": "10.1093/jeb/voae012"
     },
     {
       "abstract": "Uses fossil records to predict niche shifts and spatial dynamics in coral reefs.",
+      "externalUrl": "https://doi.org/10.1111/jbi.14856",
       "authors": [
         "Umberto Diego Rodrigues de Oliveira",
         "Ricardo Dobrovolski",
@@ -390,11 +393,6 @@
         "Carlos Daniel Pérez",
         "Bruno Vilela"
       ],
-      "citations": 0,
-      "doi": "10.1111/jbi.14856",
-      "externalUrl": "https://doi.org/10.1111/jbi.14856",
-      "journal": "Journal of Biogeography",
-      "source": "ORCID + CrossRef",
       "theme": "Biogeography",
       "themes": [
         "Biogeography",
@@ -402,35 +400,40 @@
         "Ecological Modelling",
         "Conservation"
       ],
+      "citations": 0,
+      "journal": "Journal of Biogeography",
       "title": "Using fossil records to predict short‐term changes in niche and spatial dynamics in a broadly distributed coral reef: Niche conservatism and adaptation",
       "type": "Article",
-      "year": 2024
+      "source": "ORCID + CrossRef",
+      "year": 2024,
+      "doi": "10.1111/jbi.14856"
     },
     {
       "abstract": "Framework to expand incomplete phylogenies using non-molecular phylogenetic information.",
+      "externalUrl": "https://doi.org/10.1111/geb.13733",
       "authors": [
         "Ignacio Ramos‐Gutiérrez",
         "Herlander Lima",
         "Bruno Vilela",
         "Rafael Molina‐Venegas"
       ],
-      "citations": 0,
-      "doi": "10.1111/geb.13733",
-      "externalUrl": "https://doi.org/10.1111/geb.13733",
-      "journal": "Global Ecology and Biogeography",
-      "source": "ORCID + CrossRef",
       "theme": "Evolution",
       "themes": [
         "Evolution",
         "Biogeography",
         "Macroecology"
       ],
+      "citations": 0,
+      "journal": "Global Ecology and Biogeography",
       "title": "A generalized framework to expand incomplete phylogenies using non‐molecular phylogenetic information",
       "type": "Article",
-      "year": 2023
+      "source": "ORCID + CrossRef",
+      "year": 2023,
+      "doi": "10.1111/geb.13733"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.1016/j.pecon.2022.11.001",
       "authors": [
         "Luara Tourinho",
         "Sara Maria de Brito Alves",
@@ -446,22 +449,22 @@
         "Ricardo Dobrovolski",
         "Bruno Vilela"
       ],
-      "citations": 0,
-      "doi": "10.1016/j.pecon.2022.11.001",
-      "externalUrl": "https://doi.org/10.1016/j.pecon.2022.11.001",
-      "journal": "Perspectives in Ecology and Conservation",
-      "source": "ORCID + CrossRef",
       "theme": "Conservation",
       "themes": [
         "Conservation",
         "Spatial Ecology"
       ],
+      "citations": 0,
+      "journal": "Perspectives in Ecology and Conservation",
       "title": "A participatory approach to map strategic areas for conservation and restoration at a regional scale",
       "type": "Article",
-      "year": 2023
+      "source": "ORCID + CrossRef",
+      "year": 2023,
+      "doi": "10.1016/j.pecon.2022.11.001"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.1007/s10530-023-03203-3",
       "authors": [
         "Jose Montalva",
         "Bruce Hoagland",
@@ -471,42 +474,42 @@
         "Bruno Vilela",
         "Daniel Paiva Silva"
       ],
-      "citations": 0,
-      "doi": "10.1007/s10530-023-03203-3",
-      "externalUrl": "https://doi.org/10.1007/s10530-023-03203-3",
-      "journal": "Biological Invasions",
-      "source": "ORCID + CrossRef",
       "theme": "Climate Change",
       "themes": [
         "Climate Change",
         "Macroecology"
       ],
+      "citations": 0,
+      "journal": "Biological Invasions",
       "title": "Macroecological perspectives on the competition between the native and invasive bumblebees in southern South America under climate change",
       "type": "Article",
-      "year": 2023
+      "source": "ORCID + CrossRef",
+      "year": 2023,
+      "doi": "10.1007/s10530-023-03203-3"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.1016/j.zool.2023.126079",
       "authors": [
         "André Luis da Cruz",
         "Bruno Vilela",
         "Wilfried Klein"
       ],
-      "citations": 0,
-      "doi": "10.1016/j.zool.2023.126079",
-      "externalUrl": "https://doi.org/10.1016/j.zool.2023.126079",
-      "journal": "Zoology",
-      "source": "ORCID + CrossRef",
       "theme": "Biodiversity",
       "themes": [
         "Biodiversity"
       ],
+      "citations": 0,
+      "journal": "Zoology",
       "title": "Morphological and physiological traits of the respiratory system in Iguana iguana and other non-avian reptiles",
       "type": "Article",
-      "year": 2023
+      "source": "ORCID + CrossRef",
+      "year": 2023,
+      "doi": "10.1016/j.zool.2023.126079"
     },
     {
       "abstract": "Interdisciplinary research on the biogeography and evolution of land ownership.",
+      "externalUrl": "https://doi.org/10.1111/jbi.14603",
       "authors": [
         "Hannah Haynie",
         "Geoff Kushnick",
@@ -517,10 +520,6 @@
         "Ty Tuff",
         "Bruno Vilela de Moraes e Silva"
       ],
-      "citations": 0,
-      "doi": "10.1111/jbi.14603",
-      "externalUrl": "https://doi.org/10.1111/jbi.14603",
-      "journal": "Journal of Biogeography",
       "scholarUrl": "https://scholar.google.com/scholar?q=The%20biogeography%20and%20evolution%20of%20land%20ownership",
       "theme": "Cultural Evolution",
       "themes": [
@@ -528,33 +527,37 @@
         "Biogeography",
         "Human Ecology"
       ],
+      "citations": 0,
+      "journal": "Journal of Biogeography",
       "title": "The biogeography and evolution of land ownership",
       "type": "Article",
-      "year": 2023
+      "year": 2023,
+      "doi": "10.1111/jbi.14603"
     },
     {
       "abstract": "Discusses exceptions to the abundant-center pattern from a macroecological perspective.",
+      "externalUrl": "https://doi.org/10.1111/ecog.06365",
       "authors": [
         "Trevor S. Fristoe",
         "Bruno Vilela",
         "James H. Brown",
         "Carlos A. Botero"
       ],
-      "citations": 0,
-      "doi": "10.1111/ecog.06365",
-      "externalUrl": "https://doi.org/10.1111/ecog.06365",
-      "journal": "Ecography",
-      "source": "ORCID + CrossRef",
       "theme": "Biogeography",
       "themes": [
         "Biogeography"
       ],
+      "citations": 0,
+      "journal": "Ecography",
       "title": "Abundant‐core thinking clarifies exceptions to the abundant‐center distribution pattern",
       "type": "Article",
-      "year": 2022
+      "source": "ORCID + CrossRef",
+      "year": 2022,
+      "doi": "10.1111/ecog.06365"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.1016/j.ecolmodel.2022.110071",
       "authors": [
         "Emerson Campos Barbosa Junior",
         "Vitor Passos Rios",
@@ -562,23 +565,23 @@
         "Bruno Vilela",
         "Hilton F. Japyassu"
       ],
-      "citations": 0,
-      "doi": "10.1016/j.ecolmodel.2022.110071",
-      "externalUrl": "https://doi.org/10.1016/j.ecolmodel.2022.110071",
-      "journal": "Ecological Modelling",
-      "source": "ORCID + CrossRef",
       "theme": "Data Science",
       "themes": [
         "Data Science",
         "Ecological Modelling",
         "Conservation"
       ],
+      "citations": 0,
+      "journal": "Ecological Modelling",
       "title": "Effect of behavioural plasticity and environmental properties on the resilience of communities under habitat loss and fragmentation",
       "type": "Article",
-      "year": 2022
+      "source": "ORCID + CrossRef",
+      "year": 2022,
+      "doi": "10.1016/j.ecolmodel.2022.110071"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.3390/d14060467",
       "authors": [
         "Wanderson Siqueira Teles",
         "Daniel de Paiva Silva",
@@ -587,22 +590,22 @@
         "João Carlos Pires-Oliveira",
         "Marcel Sabino Miranda"
       ],
-      "citations": 0,
-      "doi": "10.3390/d14060467",
-      "externalUrl": "https://doi.org/10.3390/d14060467",
-      "journal": "Diversity",
-      "source": "ORCID + CrossRef",
       "theme": "Climate Change",
       "themes": [
         "Climate Change",
         "Biogeography"
       ],
+      "citations": 0,
+      "journal": "Diversity",
       "title": "How Will the Distributions of Native and Invasive Species Be Affected by Climate Change? Insights from Giant South American Land Snails",
       "type": "Article",
-      "year": 2022
+      "source": "ORCID + CrossRef",
+      "year": 2022,
+      "doi": "10.3390/d14060467"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.1111/icad.12595",
       "authors": [
         "Eric Jó Moura Lopes",
         "Bruno Vilela",
@@ -616,23 +619,23 @@
         "Ricardo Dobrovolski",
         "Favízia Freitas de Oliveira"
       ],
-      "citations": 0,
-      "doi": "10.1111/icad.12595",
-      "externalUrl": "https://doi.org/10.1111/icad.12595",
-      "journal": "Insect Conservation and Diversity",
-      "source": "ORCID + CrossRef",
       "theme": "Conservation",
       "themes": [
         "Conservation",
         "Climate Change",
         "Macroecology"
       ],
+      "citations": 0,
+      "journal": "Insect Conservation and Diversity",
       "title": "Local abundance of neotropical orchid bees in Amazon forests not related to large‐scale climate suitability",
       "type": "Article",
-      "year": 2022
+      "source": "ORCID + CrossRef",
+      "year": 2022,
+      "doi": "10.1111/icad.12595"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.1016/j.cbpa.2021.111073",
       "authors": [
         "Helena Rachel da Mota Araujo",
         "Jose Eduardo de Carvalho",
@@ -640,23 +643,23 @@
         "Bruno Vilela",
         "Andre Luis da Cruz"
       ],
-      "citations": 0,
-      "doi": "10.1016/j.cbpa.2021.111073",
-      "externalUrl": "https://doi.org/10.1016/j.cbpa.2021.111073",
-      "journal": "Comparative Biochemistry and Physiology Part A: Molecular & Integrative Physiology",
-      "source": "ORCID + CrossRef",
       "theme": "Physiology",
       "themes": [
         "Physiology",
         "Functional Ecology",
         "Evolution"
       ],
+      "citations": 0,
+      "journal": "Comparative Biochemistry and Physiology Part A: Molecular & Integrative Physiology",
       "title": "Patterns of energetic substrate modifications in response to feeding in boas, Boa constrictor (Serpentes, Boidae)",
       "type": "Article",
-      "year": 2022
+      "source": "ORCID + CrossRef",
+      "year": 2022,
+      "doi": "10.1016/j.cbpa.2021.111073"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.11606/issn.2316-9079.v21i2p181-203",
       "authors": [
         "Filipe Augusto C. Nascimento",
         "Anyelet Valencia Aguilar",
@@ -664,23 +667,23 @@
         "Barnagleison S. Lisboa",
         "Bruno Vilela"
       ],
-      "citations": 0,
-      "doi": "10.11606/issn.2316-9079.v21i2p181-203",
-      "externalUrl": "https://doi.org/10.11606/issn.2316-9079.v21i2p181-203",
-      "journal": "Phyllomedusa: Journal of Herpetology",
-      "source": "ORCID + CrossRef",
       "theme": "Biodiversity",
       "themes": [
         "Biodiversity",
         "Herpetology",
         "Natural History"
       ],
+      "citations": 0,
+      "journal": "Phyllomedusa: Journal of Herpetology",
       "title": "Reproductive notes and larval development of Macrogenioglottus alipioi (Anura: Odontophrynidae) from the northern Atlantic forest",
       "type": "Article",
-      "year": 2022
+      "source": "ORCID + CrossRef",
+      "year": 2022,
+      "doi": "10.11606/issn.2316-9079.v21i2p181-203"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.3354/meps13712",
       "authors": [
         "E Lanna",
         "D Santos",
@@ -692,21 +695,21 @@
         "JL Carraro",
         "U Pinheiro"
       ],
-      "citations": 0,
-      "doi": "10.3354/meps13712",
-      "externalUrl": "https://doi.org/10.3354/meps13712",
-      "journal": "Marine Ecology Progress Series",
-      "source": "ORCID + CrossRef",
       "theme": "Biodiversity",
       "themes": [
         "Biodiversity"
       ],
+      "citations": 0,
+      "journal": "Marine Ecology Progress Series",
       "title": "Different environmental drivers influence the reproduction of a tropical sponge (Tedania ignis) along a latitudinal gradient",
       "type": "Article",
-      "year": 2021
+      "source": "ORCID + CrossRef",
+      "year": 2021,
+      "doi": "10.3354/meps13712"
     },
     {
       "abstract": "Study on biomarker responses to polycyclic aromatic hydrocarbons in the endemic fish Gambusia yucatana, imported from the publication list.",
+      "externalUrl": "https://doi.org/10.1080/10406638.2020.1755322",
       "authors": [
         "Leticia Aguilar",
         "Maurilio Lara-Flores",
@@ -715,23 +718,23 @@
         "Bruno Vilela",
         "Andre Cruz"
       ],
-      "citations": 0,
-      "doi": "10.1080/10406638.2020.1755322",
-      "externalUrl": "https://doi.org/10.1080/10406638.2020.1755322",
-      "journal": "Polycyclic Aromatic Compounds",
-      "source": "Publication list",
       "theme": "Physiology",
       "themes": [
         "Physiology",
         "Ecotoxicology",
         "Biodiversity"
       ],
+      "citations": 0,
+      "journal": "Polycyclic Aromatic Compounds",
       "title": "Effects of polycyclic aromatic hydrocarbons on biomarker responses in Gambusia yucatana, an endemic fish from Yucatán Peninsula, Mexico",
       "type": "Article",
-      "year": 2021
+      "source": "Publication list",
+      "year": 2021,
+      "doi": "10.1080/10406638.2020.1755322"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.1007/s10530-021-02460-4",
       "authors": [
         "Luiza Gabriela Fulgencio-Lima",
         "Andre Felipe A. Andrade",
@@ -743,11 +746,6 @@
         "Paulo De Marco Jr",
         "Daniel P. Silva"
       ],
-      "citations": 0,
-      "doi": "10.1007/s10530-021-02460-4",
-      "externalUrl": "https://doi.org/10.1007/s10530-021-02460-4",
-      "journal": "Biological Invasions",
-      "source": "ORCID + CrossRef",
       "theme": "Climate Change",
       "themes": [
         "Climate Change",
@@ -755,12 +753,17 @@
         "Invasion Biology",
         "Ecological Modelling"
       ],
+      "citations": 0,
+      "journal": "Biological Invasions",
       "title": "Invasive plants in Brazil: climate change effects and detection of suitable areas within conservation units",
       "type": "Article",
-      "year": 2021
+      "source": "ORCID + CrossRef",
+      "year": 2021,
+      "doi": "10.1007/s10530-021-02460-4"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.7717/peerj.11673",
       "authors": [
         "Thadeu Sobral-Souza",
         "Juliana Stropp",
@@ -772,21 +775,21 @@
         "Milton Cezar Ribeiro",
         "Joaquín Hortal"
       ],
-      "citations": 0,
-      "doi": "10.7717/peerj.11673",
-      "externalUrl": "https://doi.org/10.7717/peerj.11673",
-      "journal": "PeerJ",
-      "source": "ORCID + CrossRef",
       "theme": "Biodiversity",
       "themes": [
         "Biodiversity"
       ],
+      "citations": 0,
+      "journal": "PeerJ",
       "title": "Knowledge gaps hamper understanding the relationship between fragmentation and biodiversity loss: the case of Atlantic Forest fruit-feeding butterflies",
       "type": "Article",
-      "year": 2021
+      "source": "ORCID + CrossRef",
+      "year": 2021,
+      "doi": "10.7717/peerj.11673"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.1017/ehs.2021.32",
       "authors": [
         "Hannah J. Haynie",
         "Patrick H. Kavanagh",
@@ -802,69 +805,69 @@
         "Carlos A. Botero",
         "Michael C. Gavin"
       ],
-      "citations": 0,
-      "doi": "10.1017/ehs.2021.32",
-      "externalUrl": "https://doi.org/10.1017/ehs.2021.32",
-      "journal": "Evolutionary Human Sciences",
-      "source": "ORCID + CrossRef",
       "theme": "Cultural Evolution",
       "themes": [
         "Cultural Evolution",
         "Human Ecology",
         "Evolution"
       ],
+      "citations": 0,
+      "journal": "Evolutionary Human Sciences",
       "title": "Pathways to social inequality",
       "type": "Article",
-      "year": 2021
+      "source": "ORCID + CrossRef",
+      "year": 2021,
+      "doi": "10.1017/ehs.2021.32"
     },
     {
       "abstract": "Assesses the role of protected areas in maintaining natural vegetation in Brazil.",
+      "externalUrl": "https://doi.org/10.1126/sciadv.abh2932",
       "authors": [
         "Daniel Gonçalves-Souza",
         "Bruno Vilela",
         "Ben Phalan",
         "Ricardo Dobrovolski"
       ],
-      "citations": 0,
-      "doi": "10.1126/sciadv.abh2932",
-      "externalUrl": "https://doi.org/10.1126/sciadv.abh2932",
-      "journal": "Science Advances",
-      "source": "ORCID + CrossRef",
       "theme": "Conservation",
       "themes": [
         "Conservation",
         "Spatial Ecology",
         "Biodiversity"
       ],
+      "citations": 0,
+      "journal": "Science Advances",
       "title": "The role of protected areas in maintaining natural vegetation in Brazil",
       "type": "Article",
-      "year": 2021
+      "source": "ORCID + CrossRef",
+      "year": 2021,
+      "doi": "10.1126/sciadv.abh2932"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.1007/s10584-020-02687-5",
       "authors": [
         "L. M. Diele-Viegas",
         "R. T. Figueroa",
         "B. Vilela",
         "C. F. D. Rocha"
       ],
-      "citations": 0,
-      "doi": "10.1007/s10584-020-02687-5",
-      "externalUrl": "https://doi.org/10.1007/s10584-020-02687-5",
-      "journal": "Climatic Change",
-      "source": "ORCID + CrossRef",
       "theme": "Conservation",
       "themes": [
         "Conservation",
         "Climate Change",
         "Biodiversity"
       ],
+      "citations": 0,
+      "journal": "Climatic Change",
       "title": "Are reptiles toast? A worldwide evaluation of Lepidosauria vulnerability to climate change",
       "type": "Article",
-      "year": 2020
+      "source": "ORCID + CrossRef",
+      "year": 2020,
+      "doi": "10.1007/s10584-020-02687-5"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.3897/BDJ.8.e53474",
       "authors": [
         "Cristina Ronquillo",
         "Fernanda Alves-Martins",
@@ -874,11 +877,6 @@
         "Nagore G. Medina",
         "Joaquin Hortal"
       ],
-      "citations": 0,
-      "doi": "10.3897/BDJ.8.e53474",
-      "externalUrl": "https://doi.org/10.3897/BDJ.8.e53474",
-      "journal": "Biodiversity Data Journal",
-      "source": "ORCID + CrossRef",
       "theme": "Biogeography",
       "themes": [
         "Biogeography",
@@ -886,12 +884,17 @@
         "Spatial Ecology",
         "Biodiversity"
       ],
+      "citations": 0,
+      "journal": "Biodiversity Data Journal",
       "title": "Assessing spatial and temporal biases and gaps in the publicly available distributional information of Iberian mosses",
       "type": "Article",
-      "year": 2020
+      "source": "ORCID + CrossRef",
+      "year": 2020,
+      "doi": "10.3897/BDJ.8.e53474"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.1017/ehs.2020.55",
       "authors": [
         "Bruno Vilela",
         "Trevor Fristoe",
@@ -902,11 +905,6 @@
         "Michael C. Gavin",
         "Carlos A. Botero"
       ],
-      "citations": 0,
-      "doi": "10.1017/ehs.2020.55",
-      "externalUrl": "https://doi.org/10.1017/ehs.2020.55",
-      "journal": "Evolutionary Human Sciences",
-      "source": "ORCID + CrossRef",
       "theme": "Cultural Evolution",
       "themes": [
         "Cultural Evolution",
@@ -914,12 +912,17 @@
         "Human Ecology",
         "Macroecology"
       ],
+      "citations": 0,
+      "journal": "Evolutionary Human Sciences",
       "title": "Cultural transmission and ecological opportunity jointly shaped global patterns of reliance on agriculture",
       "type": "Article",
-      "year": 2020
+      "source": "ORCID + CrossRef",
+      "year": 2020,
+      "doi": "10.1017/ehs.2020.55"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.1111/ecog.05205",
       "authors": [
         "Patrick H. Kavanagh",
         "Hannah J. Haynie",
@@ -933,23 +936,23 @@
         "Carlos A. Botero",
         "Michael C. Gavin"
       ],
-      "citations": 0,
-      "doi": "10.1111/ecog.05205",
-      "externalUrl": "https://doi.org/10.1111/ecog.05205",
-      "journal": "Ecography",
-      "source": "ORCID + CrossRef",
       "theme": "Cultural Evolution",
       "themes": [
         "Cultural Evolution",
         "Human Ecology",
         "Macroecology"
       ],
+      "citations": 0,
+      "journal": "Ecography",
       "title": "Drivers of global variation in land ownership",
       "type": "Article",
-      "year": 2020
+      "source": "ORCID + CrossRef",
+      "year": 2020,
+      "doi": "10.1111/ecog.05205"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.7717/peerj.9708",
       "authors": [
         "Marco Tulio Pacheco Coelho",
         "Joao Fabricio Mota Rodrigues",
@@ -960,23 +963,23 @@
         "Jose Alexandre Felizola Diniz-Filho",
         "Ricardo Dobrovolski"
       ],
-      "citations": 0,
-      "doi": "10.7717/peerj.9708",
-      "externalUrl": "https://doi.org/10.7717/peerj.9708",
-      "journal": "PeerJ",
-      "source": "ORCID + CrossRef",
       "theme": "Human Ecology",
       "themes": [
         "Human Ecology",
         "Macroecology",
         "Data Science"
       ],
+      "citations": 0,
+      "journal": "PeerJ",
       "title": "Global expansion of COVID-19 pandemic is driven by population size and airport connections",
       "type": "Article",
-      "year": 2020
+      "source": "ORCID + CrossRef",
+      "year": 2020,
+      "doi": "10.7717/peerj.9708"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.3389/fgene.2019.01344",
       "authors": [
         "Rilquer Mascarenhas",
         "Flávia M. Ruziska",
@@ -999,21 +1002,21 @@
         "Bruno Vilela",
         "Pedro Milet Meirelles"
       ],
-      "citations": 0,
-      "doi": "10.3389/fgene.2019.01344",
-      "externalUrl": "https://doi.org/10.3389/fgene.2019.01344",
-      "journal": "Frontiers in Genetics",
-      "source": "ORCID + CrossRef",
       "theme": "Macroecology",
       "themes": [
         "Macroecology"
       ],
+      "citations": 0,
+      "journal": "Frontiers in Genetics",
       "title": "Integrating Computational Methods to Investigate the Macroecology of Microbiomes",
       "type": "Article",
-      "year": 2020
+      "source": "ORCID + CrossRef",
+      "year": 2020,
+      "doi": "10.3389/fgene.2019.01344"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.1080/01650521.2020.1815942",
       "authors": [
         "Filipe Augusto Cavalcanti do Nascimento",
         "Bruno Vilela",
@@ -1023,21 +1026,21 @@
         "Fernando Leal",
         "Rafael de Sá"
       ],
-      "citations": 0,
-      "doi": "10.1080/01650521.2020.1815942",
-      "externalUrl": "https://doi.org/10.1080/01650521.2020.1815942",
-      "journal": "Studies on Neotropical Fauna and Environment",
-      "source": "ORCID + CrossRef",
       "theme": "Biodiversity",
       "themes": [
         "Biodiversity"
       ],
+      "citations": 0,
+      "journal": "Studies on Neotropical Fauna and Environment",
       "title": "Reproductive biology and sexual dimorphism of the poorly known frogChiasmocleis alagoana(Microhylidae, Gastrophryninae), with an updated diagnosis for the species",
       "type": "Article",
-      "year": 2020
+      "source": "ORCID + CrossRef",
+      "year": 2020,
+      "doi": "10.1080/01650521.2020.1815942"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.1371/journal.pone.0238729",
       "authors": [
         "Ricardo Ribeiro da Silva",
         "Bruno Vilela",
@@ -1047,11 +1050,6 @@
         "Gabriela Silva Ribeiro Goncalves",
         "Marcos Persio Dantas Santos"
       ],
-      "citations": 0,
-      "doi": "10.1371/journal.pone.0238729",
-      "externalUrl": "https://doi.org/10.1371/journal.pone.0238729",
-      "journal": "PLOS ONE",
-      "source": "ORCID + CrossRef",
       "theme": "Evolution",
       "themes": [
         "Evolution",
@@ -1059,12 +1057,17 @@
         "Biogeography",
         "Ecological Niche"
       ],
+      "citations": 0,
+      "journal": "PLOS ONE",
       "title": "The role of ecological niche evolution on diversification patterns of birds distinctly distributed between the Amazonia and Atlantic rainforests",
       "type": "Article",
-      "year": 2020
+      "source": "ORCID + CrossRef",
+      "year": 2020,
+      "doi": "10.1371/journal.pone.0238729"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.1007/s13592-019-00711-x",
       "authors": [
         "Daniel P. Silva",
         "Ana Carollina F. Castro",
@@ -1075,45 +1078,45 @@
         "Michael S. Engel",
         "John S. Ascher"
       ],
-      "citations": 0,
-      "doi": "10.1007/s13592-019-00711-x",
-      "externalUrl": "https://doi.org/10.1007/s13592-019-00711-x",
-      "journal": "Apidologie",
-      "source": "ORCID + CrossRef",
       "theme": "Biogeography",
       "themes": [
         "Biogeography",
         "Ecological Niche",
         "Invasion Biology"
       ],
+      "citations": 0,
+      "journal": "Apidologie",
       "title": "Colonizing the east and the west: distribution and niche properties of a dwarf Asian honey bee invading Africa, the Middle East, the Malay Peninsula, and Taiwan",
       "type": "Article",
-      "year": 2019
+      "source": "ORCID + CrossRef",
+      "year": 2019,
+      "doi": "10.1007/s13592-019-00711-x"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.1007/s13127-019-00394-3",
       "authors": [
         "Felipe Vivallo",
         "Bruno Vilela",
         "Daniel Paiva Silva"
       ],
-      "citations": 0,
-      "doi": "10.1007/s13127-019-00394-3",
-      "externalUrl": "https://doi.org/10.1007/s13127-019-00394-3",
-      "journal": "Organisms Diversity & Evolution",
-      "source": "ORCID + CrossRef",
       "theme": "Macroecology",
       "themes": [
         "Macroecology",
         "Biogeography",
         "Biodiversity"
       ],
+      "citations": 0,
+      "journal": "Organisms Diversity & Evolution",
       "title": "Inferring host-cleptoparasite complexes of South American Centridine bees (Hymenoptera: Apidae) using macroecological perspectives",
       "type": "Article",
-      "year": 2019
+      "source": "ORCID + CrossRef",
+      "year": 2019,
+      "doi": "10.1007/s13127-019-00394-3"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.1038/s41562-018-0358-8",
       "authors": [
         "Patrick H. Kavanagh",
         "Bruno Vilela",
@@ -1124,11 +1127,6 @@
         "Carlos A. Botero",
         "Michael C. Gavin"
       ],
-      "citations": 0,
-      "doi": "10.1038/s41562-018-0358-8",
-      "externalUrl": "https://doi.org/10.1038/s41562-018-0358-8",
-      "journal": "Nature Human Behaviour",
-      "source": "ORCID + CrossRef",
       "theme": "Cultural Evolution",
       "themes": [
         "Cultural Evolution",
@@ -1137,22 +1135,22 @@
         "Macroecology",
         "Data Science"
       ],
+      "citations": 0,
+      "journal": "Nature Human Behaviour",
       "title": "Hindcasting global population densities reveals forces enabling the origin of agriculture",
       "type": "Article",
-      "year": 2018
+      "source": "ORCID + CrossRef",
+      "year": 2018,
+      "doi": "10.1038/s41562-018-0358-8"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.4257/oeco.2018.2202.03",
       "authors": [
         "Bruno Vilela",
         "Filipe Augusto Nascimento",
         "Marcos Vinicius Carneiro Vital"
       ],
-      "citations": 0,
-      "doi": "10.4257/oeco.2018.2202.03",
-      "externalUrl": "https://doi.org/10.4257/oeco.2018.2202.03",
-      "journal": "Oecologia Australis",
-      "source": "ORCID + CrossRef",
       "theme": "Climate Change",
       "themes": [
         "Climate Change",
@@ -1160,12 +1158,17 @@
         "Conservation",
         "Herpetology"
       ],
+      "citations": 0,
+      "journal": "Oecologia Australis",
       "title": "IMPACTS OF CLIMATE CHANGE ON SMALL-RANGED AMPHIBIANS OF THE NORTHERN ATLANTIC FOREST",
       "type": "Article",
-      "year": 2018
+      "source": "ORCID + CrossRef",
+      "year": 2018,
+      "doi": "10.4257/oeco.2018.2202.03"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.1111/icad.12318",
       "authors": [
         "Daniel Paiva Silva",
         "Rebecca M. Dew",
@@ -1173,23 +1176,23 @@
         "Mark I. Stevens",
         "Michael P. Schwarz"
       ],
-      "citations": 0,
-      "doi": "10.1111/icad.12318",
-      "externalUrl": "https://doi.org/10.1111/icad.12318",
-      "journal": "Insect Conservation and Diversity",
-      "source": "ORCID + CrossRef",
       "theme": "Conservation",
       "themes": [
         "Conservation",
         "Climate Change",
         "Ecological Modelling"
       ],
+      "citations": 0,
+      "journal": "Insect Conservation and Diversity",
       "title": "No deaths in the desert: predicted responses of an arid‐adapted bee and its two nesting trees suggest resilience in the face of warming climates",
       "type": "Article",
-      "year": 2018
+      "source": "ORCID + CrossRef",
+      "year": 2018,
+      "doi": "10.1111/icad.12318"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.1098/rsos.171897",
       "authors": [
         "Michael C. Gavin",
         "Patrick H. Kavanagh",
@@ -1204,23 +1207,23 @@
         "Bruno Vilela",
         "Carlos A. Botero"
       ],
-      "citations": 0,
-      "doi": "10.1098/rsos.171897",
-      "externalUrl": "https://doi.org/10.1098/rsos.171897",
-      "journal": "Royal Society Open Science",
-      "source": "ORCID + CrossRef",
       "theme": "Cultural Evolution",
       "themes": [
         "Cultural Evolution",
         "Human Ecology",
         "Macroecology"
       ],
+      "citations": 0,
+      "journal": "Royal Society Open Science",
       "title": "The global geography of human subsistence",
       "type": "Article",
-      "year": 2018
+      "source": "ORCID + CrossRef",
+      "year": 2018,
+      "doi": "10.1098/rsos.171897"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.1111/2041-210X.12945",
       "authors": [
         "Jamie M. Kass",
         "Bruno Vilela",
@@ -1229,11 +1232,6 @@
         "Cory Merow",
         "Robert P. Anderson"
       ],
-      "citations": 0,
-      "doi": "10.1111/2041-210X.12945",
-      "externalUrl": "https://doi.org/10.1111/2041-210X.12945",
-      "journal": "Methods in Ecology and Evolution",
-      "source": "ORCID + CrossRef",
       "theme": "Ecological Niche",
       "themes": [
         "Ecological Niche",
@@ -1241,12 +1239,17 @@
         "Ecological Modelling",
         "Data Science"
       ],
+      "citations": 0,
+      "journal": "Methods in Ecology and Evolution",
       "title": "Wallace: A flexible platform for reproducible modeling of species niches and distributions built for community expansion",
       "type": "Article",
-      "year": 2018
+      "source": "ORCID + CrossRef",
+      "year": 2018,
+      "doi": "10.1111/2041-210X.12945"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.1371/journal.pone.0186742",
       "authors": [
         "Minerva Singh",
         "Daniel A. Friess",
@@ -1256,23 +1259,23 @@
         "Rizza Karen A. Veridiano",
         "Roven D. Tumaneng"
       ],
-      "citations": 0,
-      "doi": "10.1371/journal.pone.0186742",
-      "externalUrl": "https://doi.org/10.1371/journal.pone.0186742",
-      "journal": "PLOS ONE",
-      "source": "ORCID + CrossRef",
       "theme": "Spatial Ecology",
       "themes": [
         "Spatial Ecology",
         "Biodiversity",
         "Conservation"
       ],
+      "citations": 0,
+      "journal": "PLOS ONE",
       "title": "Spatial relationships between above-ground biomass and bird species biodiversity in Palawan, Philippines",
       "type": "Article",
-      "year": 2017
+      "source": "ORCID + CrossRef",
+      "year": 2017,
+      "doi": "10.1371/journal.pone.0186742"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.1111/icad.12240",
       "authors": [
         "Renata Alves da Mata",
         "Rosana Tidon",
@@ -1282,11 +1285,6 @@
         "Thiago Fernando Rangel",
         "Levi Carina Terribile"
       ],
-      "citations": 0,
-      "doi": "10.1111/icad.12240",
-      "externalUrl": "https://doi.org/10.1111/icad.12240",
-      "journal": "Insect Conservation and Diversity",
-      "source": "ORCID + CrossRef",
       "theme": "Macroecology",
       "themes": [
         "Macroecology",
@@ -1294,12 +1292,17 @@
         "Ecological Modelling",
         "Biodiversity"
       ],
+      "citations": 0,
+      "journal": "Insect Conservation and Diversity",
       "title": "Stacked species distribution and macroecological models provide incongruent predictions of species richness for Drosophilidae in the Brazilian savanna",
       "type": "Article",
-      "year": 2017
+      "source": "ORCID + CrossRef",
+      "year": 2017,
+      "doi": "10.1111/icad.12240"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.1111/jbi.12953",
       "authors": [
         "Bradford A. Hawkins",
         "Boris Leroy",
@@ -1310,23 +1313,23 @@
         "Xiangping Wang",
         "David Zeleny"
       ],
-      "citations": 0,
-      "doi": "10.1111/jbi.12953",
-      "externalUrl": "https://doi.org/10.1111/jbi.12953",
-      "journal": "Journal of Biogeography",
-      "source": "ORCID + CrossRef",
       "theme": "Biogeography",
       "themes": [
         "Biogeography",
         "Data Science",
         "Macroecology"
       ],
+      "citations": 0,
+      "journal": "Journal of Biogeography",
       "title": "Structural bias in aggregated species‐level variables driven by repeated species co‐occurrences: a pervasive problem in community and assemblage data",
       "type": "Article",
-      "year": 2017
+      "source": "ORCID + CrossRef",
+      "year": 2017,
+      "doi": "10.1111/jbi.12953"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.1007/s10530-016-1204-4",
       "authors": [
         "Daniel P. Silva",
         "Bruno Vilela",
@@ -1334,44 +1337,44 @@
         "Armin P. Moczek",
         "Joaquin Hortal"
       ],
-      "citations": 0,
-      "doi": "10.1007/s10530-016-1204-4",
-      "externalUrl": "https://doi.org/10.1007/s10530-016-1204-4",
-      "journal": "Biological Invasions",
-      "source": "ORCID + CrossRef",
       "theme": "Biogeography",
       "themes": [
         "Biogeography",
         "Ecological Niche",
         "Invasion Biology"
       ],
+      "citations": 0,
+      "journal": "Biological Invasions",
       "title": "Contextualized niche shifts upon independent invasions by the dung beetle Onthophagus taurus",
       "type": "Article",
-      "year": 2016
+      "source": "ORCID + CrossRef",
+      "year": 2016,
+      "doi": "10.1007/s10530-016-1204-4"
     },
     {
       "abstract": "The letsR package paper for data handling and macroecological analyses in R.",
+      "externalUrl": "https://doi.org/10.1111/2041-210X.12401",
       "authors": [
         "Bruno Vilela",
         "Fabricio Villalobos"
       ],
-      "citations": 0,
-      "doi": "10.1111/2041-210X.12401",
-      "externalUrl": "https://doi.org/10.1111/2041-210X.12401",
-      "journal": "Methods in Ecology and Evolution",
-      "source": "ORCID + CrossRef",
       "theme": "Macroecology",
       "themes": [
         "Macroecology",
         "Data Science",
         "Computational Ecology"
       ],
+      "citations": 0,
+      "journal": "Methods in Ecology and Evolution",
       "title": "letsR: a new R package for data handling and analysis in macroecology",
       "type": "Article",
-      "year": 2015
+      "source": "ORCID + CrossRef",
+      "year": 2015,
+      "doi": "10.1111/2041-210X.12401"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.1111/ecog.01132",
       "authors": [
         "Matthew E. Aiello-Lammens",
         "Robert A. Boria",
@@ -1379,11 +1382,6 @@
         "Bruno Vilela",
         "Robert P. Anderson"
       ],
-      "citations": 0,
-      "doi": "10.1111/ecog.01132",
-      "externalUrl": "https://doi.org/10.1111/ecog.01132",
-      "journal": "Ecography",
-      "source": "ORCID + CrossRef",
       "theme": "Biogeography",
       "themes": [
         "Biogeography",
@@ -1392,66 +1390,66 @@
         "Ecological Modelling",
         "Spatial Ecology"
       ],
+      "citations": 0,
+      "journal": "Ecography",
       "title": "spThin: an R package for spatial thinning of species occurrence records for use in ecological niche models",
       "type": "Article",
-      "year": 2015
+      "source": "ORCID + CrossRef",
+      "year": 2015,
+      "doi": "10.1111/ecog.01132"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.1371/journal.pone.0113429",
       "authors": [
         "Bruno Vilela",
         "Fabricio Villalobos",
         "Miguel Angel Rodriguez",
         "Levi Carina Terribile"
       ],
-      "citations": 0,
-      "doi": "10.1371/journal.pone.0113429",
-      "externalUrl": "https://doi.org/10.1371/journal.pone.0113429",
-      "journal": "PLOS ONE",
-      "source": "ORCID + CrossRef",
       "theme": "Conservation",
       "themes": [
         "Conservation",
         "Biodiversity",
         "Herpetology"
       ],
+      "citations": 0,
+      "journal": "PLOS ONE",
       "title": "Body Size, Extinction Risk and Knowledge Bias in New World Snakes",
       "type": "Article",
-      "year": 2014
+      "source": "ORCID + CrossRef",
+      "year": 2014,
+      "doi": "10.1371/journal.pone.0113429"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.1080/00222933.2014.897764",
       "authors": [
         "Bruno Vilela",
         "Barnagleison Silva Lisboa",
         "Filipe Augusto Cavalcanti do Nascimento"
       ],
-      "citations": 0,
-      "doi": "10.1080/00222933.2014.897764",
-      "externalUrl": "https://doi.org/10.1080/00222933.2014.897764",
-      "journal": "Journal of Natural History",
-      "source": "ORCID + CrossRef",
       "theme": "Biodiversity",
       "themes": [
         "Biodiversity"
       ],
+      "citations": 0,
+      "journal": "Journal of Natural History",
       "title": "Reproduction ofAgalychnis granulosaCruz, 1989 (Anura: Hylidae)",
       "type": "Article",
-      "year": 2014
+      "source": "ORCID + CrossRef",
+      "year": 2014,
+      "doi": "10.1080/00222933.2014.897764"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.1371/journal.pone.0113246",
       "authors": [
         "Daniel P. Silva",
         "Bruno Vilela",
         "Paulo De Marco",
         "Andre Nemesio"
       ],
-      "citations": 0,
-      "doi": "10.1371/journal.pone.0113246",
-      "externalUrl": "https://doi.org/10.1371/journal.pone.0113246",
-      "journal": "PLOS ONE",
-      "source": "ORCID + CrossRef",
       "theme": "Biogeography",
       "themes": [
         "Biogeography",
@@ -1459,12 +1457,17 @@
         "Ecological Modelling",
         "Evolution"
       ],
+      "citations": 0,
+      "journal": "PLOS ONE",
       "title": "Using Ecological Niche Models and Niche Analyses to Understand Speciation Patterns: The Case of Sister Neotropical Orchid Bees",
       "type": "Article",
-      "year": 2014
+      "source": "ORCID + CrossRef",
+      "year": 2014,
+      "doi": "10.1371/journal.pone.0113246"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.15560/9.4.818",
       "authors": [
         "Adriano Oliveira Maciel",
         "Bruno Vilela de Moraes e Silva",
@@ -1472,23 +1475,23 @@
         "Diva Maria Borges-Nojosa",
         "Daniel Cassiano Lima"
       ],
-      "citations": 0,
-      "doi": "10.15560/9.4.818",
-      "externalUrl": "https://doi.org/10.15560/9.4.818",
-      "journal": "Check List",
-      "source": "ORCID + CrossRef",
       "theme": "Biodiversity",
       "themes": [
         "Biodiversity",
         "Biogeography",
         "Herpetology"
       ],
+      "citations": 0,
+      "journal": "Check List",
       "title": "First records of Chthonerpeton arii Cascon and Lima-Verde, 1994 (Amphibia: Gymnophiona: Typhlonectidae) out of the type locality",
       "type": "Article",
-      "year": 2013
+      "source": "ORCID + CrossRef",
+      "year": 2013,
+      "doi": "10.15560/9.4.818"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "externalUrl": "https://doi.org/10.15560/8.2.248",
       "authors": [
         "Jose Vieira de Araujo-Neto",
         "Bruno Vilela de Moraes e Silva",
@@ -1496,42 +1499,41 @@
         "Filipe Augusto Cavalcanti do Nascimento",
         "Barnagleison da Silva Lisboa"
       ],
-      "citations": 0,
-      "doi": "10.15560/8.2.248",
-      "externalUrl": "https://doi.org/10.15560/8.2.248",
-      "journal": "Check List",
-      "source": "ORCID + CrossRef",
       "theme": "Biodiversity",
       "themes": [
         "Biodiversity",
         "Biogeography",
         "Herpetology"
       ],
+      "citations": 0,
+      "journal": "Check List",
       "title": "New records and geographic distribution map of Dendropsophus haddadi (Bastos and Pombal, 1996) (Anura: Hylidae) with comments on color patterns",
       "type": "Article",
-      "year": 2012
+      "source": "ORCID + CrossRef",
+      "year": 2012,
+      "doi": "10.15560/8.2.248"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+      "citationSource": "CrossRef",
+      "externalUrl": "https://doi.org/10.1590/S1984-46702011000300018",
       "authors": [
         "Filipe A. Nascimento",
         "Bruno Vilela",
         "Barnagleison Lisboa"
       ],
-      "citationSource": "CrossRef",
-      "citations": 0,
-      "doi": "10.1590/S1984-46702011000300018",
-      "externalUrl": "https://doi.org/10.1590/S1984-46702011000300018",
-      "journal": "Zoologia",
       "scholarUrl": "https://scholar.google.com/scholar?q=Gabriel%20Omar%20Skuk%20Sugliano%20(1962-2011)",
-      "source": "ORCID + CrossRef",
       "theme": "Obituary",
       "themes": [
         "Obituary"
       ],
+      "citations": 0,
+      "journal": "Zoologia",
       "title": "Gabriel Omar Skuk Sugliano (1962-2011)",
       "type": "Article",
-      "year": 2011
+      "source": "ORCID + CrossRef",
+      "year": 2011,
+      "doi": "10.1590/S1984-46702011000300018"
     },
     {
       "abstract": "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
@@ -1541,20 +1543,20 @@
         "Ubiratan Goncalves",
         "Gabriel Omar Skuk Sugliano"
       ],
-      "citations": 0,
-      "doi": "",
-      "journal": "Cuadernos de Herpetologia",
       "scholarUrl": "https://scholar.google.com/scholar?q=Siphlophis%20compressus%20(Daudin%2C%201803)%20(Squamata%3A%20Dipsadidae)%3A%20First%20records%20for%20the%20Atlantic%20forest%20north%20of%20the%20S%C3%A3o%20Francisco%20river%2C%20northeastern%20Brazil",
-      "source": "ORCID",
       "theme": "Biodiversity",
       "themes": [
         "Biodiversity",
         "Biogeography",
         "Herpetology"
       ],
+      "citations": 0,
+      "journal": "Cuadernos de Herpetologia",
       "title": "Siphlophis compressus (Daudin, 1803) (Squamata: Dipsadidae): First records for the Atlantic forest north of the São Francisco river, northeastern Brazil",
       "type": "Article",
-      "year": 2011
+      "source": "ORCID",
+      "year": 2011,
+      "doi": ""
     }
   ]
 }
