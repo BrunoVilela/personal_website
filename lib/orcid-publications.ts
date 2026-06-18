@@ -2,6 +2,10 @@ import { publications, type Publication } from "@/data/publications";
 
 const ORCID_ID = "0000-0003-4072-0558";
 const ORCID_API = `https://pub.orcid.org/v3.0/${ORCID_ID}/works`;
+const CROSSREF_HEADERS = {
+  Accept: "application/json",
+  "User-Agent": "BrunoVilelaAcademicWebsite/1.0 (mailto:bruno.vilela@ufba.br)"
+};
 
 export type PublicationSync = {
   publications: Publication[];
@@ -82,24 +86,31 @@ async function toPublication(group: OrcidGroup): Promise<Publication | null> {
   const resolvedDoi = doi || clean(crossref?.DOI);
   const parsedYearValue = summary["publication-date"]?.year?.value;
   const parsedYear = parsedYearValue ? Number(parsedYearValue) : undefined;
-  const fallbackYear = findLocalPublicationYear(title, resolvedDoi);
-  const year = resolvePublicationYear(crossref, parsedYear, fallbackYear);
-  const journal = clean(crossref?.["container-title"]?.[0]) || clean(summary["journal-title"]?.value) || "ORCID-indexed publication";
+  const localPublication = findLocalPublication(title, resolvedDoi);
+  const year = resolvePublicationYear(crossref, parsedYear, localPublication?.year);
+  const journal =
+    clean(crossref?.["container-title"]?.[0]) ||
+    clean(summary["journal-title"]?.value) ||
+    localPublication?.journal ||
+    "ORCID-indexed publication";
   const authors = crossref?.author?.map((author) => `${author.given ?? ""} ${author.family ?? ""}`.trim()).filter(Boolean);
+  const titleForDisplay = clean(crossref?.title?.[0]) || title;
 
   return {
-    title: clean(crossref?.title?.[0]) || title,
+    title: titleForDisplay,
     year,
     type: mapWorkType(crossref?.type ?? summary.type),
     theme: inferThemes(`${title} ${journal}`)[0],
-    themes: inferThemes(`${title} ${journal}`),
-    authors: authors?.length ? authors : ["Bruno Vilela de Moraes e Silva"],
+    themes: inferThemes(`${titleForDisplay} ${journal}`),
+    authors: authors?.length ? authors : localPublication?.authors ?? ["Bruno Vilela de Moraes e Silva"],
     journal,
-    doi: resolvedDoi,
-    citations: crossref?.["is-referenced-by-count"] ?? 0,
-    abstract: "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
-    externalUrl: resolvedDoi ? `https://doi.org/${resolvedDoi}` : summary.url?.value,
-    scholarUrl: googleScholarArticleUrl(clean(crossref?.title?.[0]) || title),
+    doi: resolvedDoi ?? localPublication?.doi,
+    citations: crossref?.["is-referenced-by-count"] ?? localPublication?.citations ?? 0,
+    abstract:
+      localPublication?.abstract ??
+      "Record synchronized automatically from the public ORCID profile. Bibliographic metadata are enriched through DOI/CrossRef when available.",
+    externalUrl: resolvedDoi ? `https://doi.org/${resolvedDoi}` : localPublication?.externalUrl ?? summary.url?.value,
+    scholarUrl: googleScholarArticleUrl(titleForDisplay),
     source: crossref ? "ORCID + CrossRef" : "ORCID",
     citationSource: crossref ? "CrossRef" : undefined
   };
@@ -108,6 +119,7 @@ async function toPublication(group: OrcidGroup): Promise<Publication | null> {
 async function fetchCrossRefByDoi(doi: string): Promise<CrossRefWork | null> {
   try {
     const response = await fetch(`https://api.crossref.org/works/${encodeURIComponent(doi)}`, {
+      headers: CROSSREF_HEADERS,
       next: { revalidate: 60 * 60 * 24 }
     });
     if (!response.ok) return null;
@@ -121,6 +133,7 @@ async function fetchCrossRefByDoi(doi: string): Promise<CrossRefWork | null> {
 async function fetchCrossRefByTitle(title: string): Promise<CrossRefWork | null> {
   try {
     const response = await fetch(`https://api.crossref.org/works?query.title=${encodeURIComponent(title)}&rows=5`, {
+      headers: CROSSREF_HEADERS,
       next: { revalidate: 60 * 60 * 24 }
     });
     if (!response.ok) return null;
@@ -145,13 +158,14 @@ function findExternalId(summary: OrcidWorkSummary, type: string) {
   );
 }
 
-function findLocalPublicationYear(title: string, doi?: string) {
+function findLocalPublication(title: string, doi?: string) {
   const normalizedTitle = normalize(title);
   const normalizedDoi = doi?.toLowerCase();
   return publications.find((publication) => {
     if (normalizedDoi && publication.doi?.toLowerCase() === normalizedDoi) return true;
-    return normalize(publication.title) === normalizedTitle;
-  })?.year;
+    const localTitle = normalize(publication.title);
+    return localTitle === normalizedTitle || localTitle.includes(normalizedTitle) || normalizedTitle.includes(localTitle);
+  });
 }
 
 function resolvePublicationYear(crossref: CrossRefWork | null, parsedYear?: number, fallbackYear?: number) {
@@ -163,15 +177,38 @@ function resolvePublicationYear(crossref: CrossRefWork | null, parsedYear?: numb
 }
 
 function mergePublications(primary: Publication[], fallback: Publication[]) {
-  const seen = new Set<string>();
+  const indexByKey = new Map<string, number>();
   const merged: Publication[] = [];
   for (const item of [...primary, ...fallback]) {
-    const key = (item.doi ? `doi:${item.doi.toLowerCase()}` : `title:${normalize(item.title)}`);
-    if (seen.has(key)) continue;
-    seen.add(key);
-    merged.push({ ...item, scholarUrl: item.scholarUrl ?? googleScholarArticleUrl(item.title) });
+    const key = item.doi ? `doi:${item.doi.toLowerCase()}` : `title:${normalize(item.title)}`;
+    const normalizedItem = { ...item, scholarUrl: item.scholarUrl ?? googleScholarArticleUrl(item.title) };
+    const existingIndex = indexByKey.get(key);
+    if (existingIndex === undefined) {
+      indexByKey.set(key, merged.length);
+      merged.push(normalizedItem);
+      continue;
+    }
+    merged[existingIndex] = mergePublicationMetadata(merged[existingIndex], normalizedItem);
   }
   return enrichKeyPublicationThemes(merged).sort((a, b) => b.year - a.year || a.title.localeCompare(b.title));
+}
+
+function mergePublicationMetadata(primary: Publication, fallback: Publication): Publication {
+  const primaryHasOnlyDefaultAuthor =
+    primary.authors.length <= 1 && normalize(primary.authors[0] ?? "") === normalize("Bruno Vilela de Moraes e Silva");
+
+  return {
+    ...primary,
+    authors: primaryHasOnlyDefaultAuthor && fallback.authors.length > 1 ? fallback.authors : primary.authors,
+    journal: primary.journal === "ORCID-indexed publication" && fallback.journal ? fallback.journal : primary.journal,
+    doi: primary.doi ?? fallback.doi,
+    citations: primary.citations || fallback.citations,
+    abstract: primary.abstract || fallback.abstract,
+    externalUrl: primary.externalUrl ?? fallback.externalUrl,
+    scholarUrl: primary.scholarUrl ?? fallback.scholarUrl,
+    themes: primary.themes?.length ? primary.themes : fallback.themes,
+    theme: primary.theme || fallback.theme
+  };
 }
 
 
