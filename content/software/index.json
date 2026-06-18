@@ -15,8 +15,8 @@
       "examples": [
         "Richness maps",
         "Presence-absence matrices",
-        "Beta diversity",
-        "Species-area curves"
+        "Attribute space",
+        "Environmental space"
       ],
       "metrics": [
         {
