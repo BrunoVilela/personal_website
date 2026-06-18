@@ -28,7 +28,9 @@ export const supervision: Supervision[] = [
     "program": "Ecology and Biomonitoring",
     "orientation": "Orientação principal",
     "emoji": "🌎",
-    "funding": "FAPESB"
+    "funding": "FAPESB",
+    "lattes": "http://lattes.cnpq.br/3042144320105964",
+    "scholar": "https://scholar.google.com.br/citations?user=gQOK3D8AAAAJ&hl=en&oi=ao"
   },
   {
     "student": "Tamires Santana Santos Freitas",
@@ -39,7 +41,8 @@ export const supervision: Supervision[] = [
     "institution": "Federal University of Bahia",
     "program": "Ecology and Biomonitoring",
     "orientation": "Orientação principal",
-    "emoji": "🌿"
+    "emoji": "🌿",
+    "lattes": "http://lattes.cnpq.br/6763700675307551"
   },
   {
     "student": "Luana Jaime Tocchio",
@@ -51,7 +54,8 @@ export const supervision: Supervision[] = [
     "program": "Ecology and Biomonitoring",
     "orientation": "Orientação principal",
     "emoji": "🐋",
-    "lattes": "http://lattes.cnpq.br/8352183159150720"
+    "lattes": "https://lattes.cnpq.br/8352183159150720",
+    "scholar": "https://scholar.google.com.br/citations?user=lAM9erQAAAAJ&hl=en&oi=ao"
   },
   {
     "student": "Ana Caroline Batista da Silva",
@@ -63,7 +67,8 @@ export const supervision: Supervision[] = [
     "program": "Biological Diversity and Conservation in the Tropics",
     "orientation": "Coorientação",
     "emoji": "🐟",
-    "funding": "CAPES"
+    "funding": "CAPES",
+    "lattes": "http://lattes.cnpq.br/1730965079143236"
   },
   {
     "student": "Paulo Moutinho Andrade de Souza",
@@ -75,7 +80,8 @@ export const supervision: Supervision[] = [
     "program": "Ecology and Biomonitoring",
     "orientation": "Orientação principal",
     "emoji": "🌿",
-    "funding": "CAPES"
+    "funding": "CAPES",
+    "lattes": "http://lattes.cnpq.br/9308899189105420"
   },
   {
     "student": "Nayra da Mata Passos",
@@ -86,7 +92,8 @@ export const supervision: Supervision[] = [
     "institution": "Federal University of Goias",
     "program": "Biological Sciences",
     "orientation": "Coorientação",
-    "emoji": "🐝"
+    "emoji": "🐝",
+    "lattes": "http://lattes.cnpq.br/5354425502189146"
   },
   {
     "student": "João Vitor Mota",
@@ -98,7 +105,7 @@ export const supervision: Supervision[] = [
     "program": "Ecology and Biomonitoring",
     "orientation": "Orientação principal",
     "emoji": "🌵",
-    "lattes": "http://lattes.cnpq.br/6302335363285915"
+    "lattes": "https://lattes.cnpq.br/6302335363285915"
   },
   {
     "student": "Luiza Meira Victor Klippel",
@@ -110,7 +117,7 @@ export const supervision: Supervision[] = [
     "program": "Ecology and Biomonitoring",
     "orientation": "Orientação principal",
     "emoji": "🛰️",
-    "lattes": "http://lattes.cnpq.br/2489798975311425"
+    "lattes": "https://lattes.cnpq.br/2489798975311425"
   },
   {
     "student": "Herberty Lay Machado",
@@ -129,7 +136,8 @@ export const supervision: Supervision[] = [
         "year": 2024,
         "level": "Iniciação Científica"
       }
-    ]
+    ],
+    "lattes": "http://lattes.cnpq.br/0320716018560375"
   },
   {
     "student": "Leno Eduardo Conceicao Torres",
@@ -141,7 +149,8 @@ export const supervision: Supervision[] = [
     "program": "Biological Sciences",
     "orientation": "Orientação",
     "emoji": "🔬",
-    "funding": "FAPESB"
+    "funding": "FAPESB",
+    "lattes": "http://lattes.cnpq.br/2693508459424609"
   },
   {
     "student": "Rafael Silva Paulino",
@@ -152,7 +161,8 @@ export const supervision: Supervision[] = [
     "institution": "Federal University of Bahia",
     "program": "Graduate Program in Biodiversity and Evolution",
     "orientation": "Coorientação",
-    "emoji": "🐦"
+    "emoji": "🐦",
+    "lattes": "http://lattes.cnpq.br/2162327270318189"
   },
   {
     "student": "Carlos Roberto Calderón Del Cid",
@@ -165,7 +175,9 @@ export const supervision: Supervision[] = [
     "orientation": "Orientação principal",
     "emoji": "🧬",
     "funding": "CAPES",
-    "lattes": "http://lattes.cnpq.br/3331732061175660"
+    "lattes": "https://lattes.cnpq.br/3331732061175660",
+    "orcid": "https://orcid.org/0000-0002-3897-4615",
+    "scholar": "https://scholar.google.com/citations?hl=pt-BR&user=n5zjxuMAAAAJ"
   },
   {
     "student": "Emerson Campos Barbosa Júnior",
@@ -178,7 +190,8 @@ export const supervision: Supervision[] = [
     "orientation": "Orientação principal",
     "emoji": "🌎",
     "funding": "FAPESB",
-    "lattes": "http://lattes.cnpq.br/7439599605129713"
+    "lattes": "https://lattes.cnpq.br/7439599605129713",
+    "scholar": "https://scholar.google.com.br/citations?hl=en&user=Gj11BtwAAAAJ"
   },
   {
     "student": "Milton Ferreira Alves Júnior",
@@ -189,7 +202,8 @@ export const supervision: Supervision[] = [
     "institution": "Federal Institute Goiano - Hidrolandia Campus",
     "program": "Professional MSc in Conservation of Cerrado Natural Resources",
     "orientation": "Coorientação",
-    "emoji": "🐝"
+    "emoji": "🐝",
+    "lattes": "http://lattes.cnpq.br/9714807163502100"
   },
   {
     "student": "Caroline Tito Garcia",
@@ -200,7 +214,9 @@ export const supervision: Supervision[] = [
     "institution": "Federal University of Bahia",
     "program": "Ecology and Biomonitoring",
     "orientation": "Coorientação",
-    "emoji": "🐝"
+    "emoji": "🐝",
+    "lattes": "http://lattes.cnpq.br/6467831483476821",
+    "scholar": "https://scholar.google.com.br/citations?hl=en&user=cYgo6aQAAAAJ"
   },
   {
     "student": "Ehiko Jerelhin Rios Alva",
@@ -212,7 +228,7 @@ export const supervision: Supervision[] = [
     "program": "Ecology and Biomonitoring",
     "orientation": "Orientação principal",
     "emoji": "🐸",
-    "lattes": "http://lattes.cnpq.br/6615037163048059"
+    "lattes": "https://lattes.cnpq.br/6615037163048059"
   },
   {
     "student": "Enée Pereira Gottschalk Morais",
@@ -224,7 +240,8 @@ export const supervision: Supervision[] = [
     "program": "Ecology and Biomonitoring",
     "orientation": "Coorientação",
     "emoji": "🎓",
-    "funding": "FAPESB"
+    "funding": "FAPESB",
+    "lattes": "http://lattes.cnpq.br/4790797900418700"
   },
   {
     "student": "Rafaela da Silva Lampa",
@@ -235,7 +252,8 @@ export const supervision: Supervision[] = [
     "institution": "Federal University of Bahia",
     "program": "Ecology and Biomonitoring",
     "orientation": "Coorientação",
-    "emoji": "🐋"
+    "emoji": "🐋",
+    "lattes": "http://lattes.cnpq.br/1081965395125481"
   },
   {
     "student": "Éric Jó Lopes",
@@ -247,7 +265,8 @@ export const supervision: Supervision[] = [
     "program": "Ecology and Biomonitoring",
     "orientation": "Coorientação",
     "emoji": "🐝",
-    "funding": "FAPESB"
+    "funding": "FAPESB",
+    "lattes": "http://lattes.cnpq.br/8743117279111260"
   },
   {
     "student": "Gabriel Tirintan de Lima",
@@ -258,7 +277,9 @@ export const supervision: Supervision[] = [
     "institution": "Federal University of Mato Grosso do Sul",
     "program": "Ecology and Conservation",
     "orientation": "Coorientação",
-    "emoji": "🐦"
+    "emoji": "🐦",
+    "lattes": "http://lattes.cnpq.br/8861238387153166",
+    "scholar": "https://scholar.google.com.br/citations?hl=en&user=kzyNrLIAAAAJ"
   },
   {
     "student": "Paulo Rocha Juliano de Carvalho",
@@ -269,7 +290,8 @@ export const supervision: Supervision[] = [
     "institution": "Federal University of Bahia",
     "program": "Ecology and Biomonitoring",
     "orientation": "Orientação principal",
-    "emoji": "📊"
+    "emoji": "📊",
+    "lattes": "http://lattes.cnpq.br/8605508373668254"
   },
   {
     "student": "Alexsandra Tosta dos Santos Oliveira",
@@ -280,7 +302,8 @@ export const supervision: Supervision[] = [
     "institution": "Federal University of Bahia",
     "program": "Professional MSc in Ecology and Environmental Management",
     "orientation": "Orientação principal",
-    "emoji": "📊"
+    "emoji": "📊",
+    "lattes": "http://lattes.cnpq.br/9173094891548428"
   },
   {
     "student": "Fernanda Noronha de Carvalho Rodriguez",
@@ -291,7 +314,8 @@ export const supervision: Supervision[] = [
     "institution": "Federal University of Bahia",
     "program": "Ecology and Biomonitoring",
     "orientation": "Orientação principal",
-    "emoji": "🛰️"
+    "emoji": "🛰️",
+    "lattes": "http://lattes.cnpq.br/9358958417470558"
   },
   {
     "student": "Giselle Maria de Britto Cunha Corrêa",
@@ -302,7 +326,8 @@ export const supervision: Supervision[] = [
     "institution": "Federal University of Bahia",
     "program": "Ecology and Biomonitoring",
     "orientation": "Orientação principal",
-    "emoji": "🌎"
+    "emoji": "🌎",
+    "lattes": "http://lattes.cnpq.br/3724059710380425"
   },
   {
     "student": "Bruna de Mattos Farina",
@@ -314,7 +339,10 @@ export const supervision: Supervision[] = [
     "program": "Postdoctoral supervision",
     "orientation": "Orientação principal",
     "emoji": "🧬",
-    "funding": "CNPq"
+    "funding": "CNPq",
+    "lattes": "http://lattes.cnpq.br/4295507482179179",
+    "orcid": "https://orcid.org/0000-0001-6506-3801",
+    "scholar": "https://scholar.google.com/citations?hl=pt-BR&user=Cg5OIfcAAAAJ"
   },
   {
     "student": "Ana Paula Andrade Miranda",
@@ -326,7 +354,8 @@ export const supervision: Supervision[] = [
     "program": "Biological Sciences",
     "orientation": "Orientação",
     "emoji": "🔬",
-    "funding": "FAPESB"
+    "funding": "FAPESB",
+    "lattes": "http://lattes.cnpq.br/7522110606742405"
   },
   {
     "student": "Maria Victoria Pinho Quaresma Ramos",
@@ -338,7 +367,8 @@ export const supervision: Supervision[] = [
     "program": "Biological Sciences",
     "orientation": "Orientação",
     "emoji": "🧬",
-    "funding": "FAPESB"
+    "funding": "FAPESB",
+    "lattes": "http://lattes.cnpq.br/9449277716385235"
   },
   {
     "student": "Kelly de Jesus Santos",
@@ -357,7 +387,8 @@ export const supervision: Supervision[] = [
         "year": 2023,
         "level": "Iniciação Científica"
       }
-    ]
+    ],
+    "lattes": "http://lattes.cnpq.br/9127496662794323"
   },
   {
     "student": "Maria Lua Vinhaes Dantas Costa",
@@ -368,7 +399,8 @@ export const supervision: Supervision[] = [
     "institution": "Federal University of Bahia",
     "program": "Biological Sciences",
     "orientation": "Orientação",
-    "emoji": "🎓"
+    "emoji": "🎓",
+    "lattes": "http://lattes.cnpq.br/6811428121399894"
   },
   {
     "student": "Solange Gonçalves da Silva",
@@ -379,6 +411,7 @@ export const supervision: Supervision[] = [
     "institution": "Federal University of Bahia",
     "program": "Biological Sciences",
     "orientation": "Orientação",
-    "emoji": "🎓"
+    "emoji": "🎓",
+    "lattes": "http://lattes.cnpq.br/1727751209741672"
   }
 ];
