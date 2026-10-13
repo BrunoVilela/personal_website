@@ -120,6 +120,18 @@ export const supervision: Supervision[] = [
     "lattes": "https://lattes.cnpq.br/2489798975311425"
   },
   {
+    "student": "Lucas Araujo Faria",
+    "title": "Exploring how phylogenetic scale predicts extinction risk in mammals",
+    "level": "Iniciação Científica",
+    "status": "Em andamento",
+    "year": 2026,
+    "institution": "Federal University of Bahia",
+    "program": "Biological Sciences",
+    "orientation": "Orientação",
+    "emoji": "🧬",
+    "funding": "CNPq"
+  },
+  {
     "student": "Herberty Lay Machado",
     "title": "Influence of climate geography on diversity patterns in Brazilian biomes",
     "level": "Iniciação Científica",
